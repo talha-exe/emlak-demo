@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emlak Realty — Luxury Real Estate & Strategic Investments</title>
+<meta name="description" content="Emlak Realty: We invest in people, relationships & value. Luxury residences, commercial assets, development opportunities & strategic investments.">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#C09A5E;--gold2:#D4AE72;--gold3:#E8C992;--gold-glass:rgba(192,154,94,.1);
+  --cream:#F4F1EB;--cream2:#EAE6DC;--cream3:#F8F6F1;
+  --dark:#0B0B09;--dark2:#111111;--dark3:#1A1A16;--dark4:#222220;
+  --accent:#553F83;--accent2:#6B5299;
+  --mid:#706A62;--muted:#9E978F;
+  --border:rgba(192,154,94,.18);--border2:rgba(192,154,94,.32);
+  --white:#FFFFFF;
+  --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:24px;--sp-6:32px;
+  --ease:cubic-bezier(.4,0,.2,1);
+  --serif:'IBM Plex Serif',Georgia,serif;
+  --sans:'Outfit',system-ui,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--dark);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideInLeft{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideInRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes pulse{0%,100%{opacity:.25;transform:scaleY(.4)}50%{opacity:1;transform:scaleY(1)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes widthGrow{from{width:0}to{width:52px}}
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:400;display:flex;align-items:center;justify-content:space-between;padding:var(--sp-5) 80px;transition:all .4s var(--ease)}
+nav.scrolled{background:rgba(11,11,9,.96);backdrop-filter:blur(24px) saturate(1.8);padding:var(--sp-4) 80px;border-bottom:1px solid var(--border)}
+.logo{font-family:var(--serif);font-size:24px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--white);text-decoration:none;transition:color .3s}
+.logo-dot{color:var(--gold)}
+.nav-links{display:flex;gap:44px;list-style:none}
+.nav-links a{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.48);text-decoration:none;font-weight:400;transition:color .25s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width .3s var(--ease)}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:var(--sp-3) var(--sp-6);border:1px solid var(--gold);color:var(--gold);background:transparent;text-decoration:none;transition:all .3s var(--ease)}
+.nav-cta:hover{background:var(--gold);color:var(--dark)}
+.nav-cta:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+
+/* HERO */
+.hero{height:100vh;min-height:760px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:0 80px 100px}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(11,11,9,.15) 0%,rgba(11,11,9,.2) 25%,rgba(11,11,9,.6) 55%,rgba(11,11,9,.95) 85%,rgba(11,11,9,1) 100%)}
+.hero-grid{position:absolute;inset:0;z-index:2;pointer-events:none;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0,rgba(255,255,255,.018) 1px,transparent 1px,transparent 80px),repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0,rgba(255,255,255,.018) 1px,transparent 1px,transparent 80px)}
+.hero-content{position:relative;z-index:3;max-width:960px}
+.eyebrow{display:flex;align-items:center;gap:var(--sp-4);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:var(--sp-5);animation:fadeUp .8s var(--ease) both .15s}
+.eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--gold)}
+.hero h1{font-family:var(--serif);font-size:clamp(64px,9vw,140px);font-weight:300;line-height:.88;letter-spacing:-.015em;color:var(--white);margin-bottom:var(--sp-5);animation:fadeUp 1s var(--ease) both .3s}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-subtitle{font-family:var(--serif);font-size:clamp(18px,2.2vw,26px);font-weight:300;font-style:italic;color:rgba(255,255,255,.55);margin-bottom:44px;animation:fadeUp 1s var(--ease) both .44s}
+.hero-pills{display:flex;flex-wrap:wrap;gap:var(--sp-3);margin-bottom:56px;animation:fadeUp 1s var(--ease) both .55s}
+.pill{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:300;padding:11px 22px;border:1px solid var(--border2);background:rgba(192,154,94,.06);backdrop-filter:blur(12px);transition:all .3s var(--ease)}
+.pill:hover{border-color:var(--gold);color:var(--gold2);background:rgba(192,154,94,.14);transform:translateY(-2px)}
+.pill-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.btn-primary{display:inline-flex;align-items:center;gap:var(--sp-4);background:var(--gold);color:var(--dark);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:19px 52px;text-decoration:none;transition:all .3s var(--ease);border:1px solid var(--gold);animation:fadeUp 1s var(--ease) both .68s}
+.btn-primary:hover{background:transparent;color:var(--gold);transform:translateY(-2px);box-shadow:0 8px 32px rgba(192,154,94,.2)}
+.btn-primary:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.btn-primary svg{transition:transform .3s var(--ease)}
+.btn-primary:hover svg{transform:translateX(6px)}
+.scroll-indicator{position:absolute;right:80px;bottom:100px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:14px;animation:fadeIn 1.4s var(--ease) both 1.2s}
+.scroll-indicator span{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.28);writing-mode:vertical-rl}
+.scroll-line{width:1px;height:64px;background:linear-gradient(to bottom,rgba(192,154,94,.9),transparent);animation:pulse 2.2s ease-in-out infinite}
+.hero-stats{position:absolute;right:0;top:50%;transform:translateY(-50%);z-index:3;animation:fadeIn 1.2s var(--ease) both 1s}
+.hstat{padding:var(--sp-5) var(--sp-6);text-align:right;background:rgba(11,11,9,.65);backdrop-filter:blur(16px);border-left:1px solid rgba(192,154,94,.22)}
+.hstat+.hstat{border-top:1px solid rgba(255,255,255,.04)}
+.hstat-num{font-family:var(--serif);font-size:42px;font-weight:300;color:var(--white);line-height:1}
+.hstat-num em{color:var(--gold);font-style:normal}
+.hstat-lbl{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:5px}
+
+/* INVESTOR */
+.investor{background:var(--cream);color:var(--dark);padding:120px 80px;display:grid;grid-template-columns:1fr 1fr;gap:0}
+.investor-left{padding-right:88px;border-right:1px solid var(--border)}
+.inv-eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:var(--sp-6);display:flex;align-items:center;gap:14px}
+.inv-eyebrow::before{content:'';width:30px;height:1px;background:var(--gold);display:block}
+.investor-left h2{font-family:var(--serif);font-size:clamp(38px,4.2vw,60px);font-weight:300;color:var(--dark);line-height:1.05;margin-bottom:44px}
+.investor-left h2 em{font-style:italic;color:var(--gold)}
+.inv-visual{width:100%;height:300px;position:relative;overflow:hidden;border-radius:2px}
+.inv-visual img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.inv-visual:hover img{transform:scale(1.04)}
+.inv-visual-caption{position:absolute;bottom:var(--sp-4);left:18px;z-index:2;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(192,154,94,.85);font-weight:500;border-left:2px solid var(--gold);padding-left:10px;background:rgba(11,11,9,.5);padding:8px 12px 8px 10px;backdrop-filter:blur(8px)}
+.investor-right{padding-left:88px}
+.investor-right h3{font-family:var(--serif);font-size:clamp(20px,2vw,28px);font-weight:400;font-style:italic;color:var(--mid);margin-bottom:40px;line-height:1.45}
+.bullet-list{list-style:none}
+.bullet-list li{display:flex;align-items:flex-start;gap:18px;padding:20px 0;border-bottom:1px solid var(--border);font-size:15px;color:var(--mid);font-weight:300;line-height:1.65;transition:color .3s}
+.bullet-list li:first-child{border-top:1px solid var(--border)}
+.bullet-list li:hover{color:var(--dark)}
+.bullet-list li::before{content:'';display:block;width:24px;height:1px;background:var(--gold);flex-shrink:0;margin-top:11px;transition:width .3s var(--ease)}
+.bullet-list li:hover::before{width:36px}
+
+/* OPPORTUNITIES */
+.opps{background:var(--dark2);padding:120px 80px}
+.sec-tag{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:var(--sp-4);display:flex;align-items:center;gap:14px}
+.sec-tag::before{content:'';display:block;width:30px;height:1px;background:var(--gold)}
+.sec-h1{font-family:var(--serif);font-size:clamp(38px,4.8vw,64px);font-weight:300;line-height:1.05;margin-bottom:18px;color:var(--white)}
+.sec-h1 em{font-style:italic;color:var(--gold)}
+.opp-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:56px}
+.opp-head-r{max-width:380px}
+.opp-head-r p{font-size:15px;color:rgba(255,255,255,.38);font-weight:300;line-height:1.82}
+.cat-label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:22px}
+.opp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.opp-card{background:rgba(255,255,255,.03);padding:52px 44px;position:relative;overflow:hidden;transition:all .4s var(--ease);cursor:default;border-top:1px solid rgba(255,255,255,.04)}
+.opp-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--gold),var(--accent));transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.opp-card:hover::after{transform:scaleX(1)}
+.opp-card:hover{background:rgba(192,154,94,.08)}
+.opp-num{font-family:var(--serif);font-size:72px;font-weight:300;color:rgba(255,255,255,.04);line-height:1;margin-bottom:18px;transition:color .4s}
+.opp-card:hover .opp-num{color:rgba(192,154,94,.14)}
+.opp-name{font-family:var(--serif);font-size:26px;font-weight:400;color:var(--white);margin-bottom:14px;transition:color .4s}
+.opp-card:hover .opp-name{color:var(--gold2)}
+.opp-desc{font-size:14px;color:rgba(255,255,255,.36);font-weight:300;line-height:1.72}
+
+/* PARTNER STRIP */
+.partner-strip{background:linear-gradient(135deg,var(--gold) 0%,#B8904F 50%,var(--gold2) 100%);padding:56px 80px;display:flex;align-items:center;justify-content:space-between;gap:60px;position:relative;overflow:hidden}
+.partner-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(255,255,255,.12),transparent 60%);pointer-events:none}
+.partner-strip p{font-size:16px;color:rgba(11,11,9,.72);font-weight:300;line-height:1.85;max-width:740px;position:relative;z-index:1}
+.partner-strip p strong{color:var(--dark);font-weight:600;font-style:italic}
+.btn-dark{display:inline-flex;align-items:center;gap:var(--sp-3);background:var(--dark);color:var(--white);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:var(--sp-4) 36px;text-decoration:none;transition:all .3s var(--ease);white-space:nowrap;border:1px solid var(--dark);flex-shrink:0;position:relative;z-index:1}
+.btn-dark:hover{background:transparent;color:var(--dark);transform:translateY(-2px)}
+.btn-dark:focus-visible{outline:2px solid var(--dark);outline-offset:3px}
+
+/* SERVICES */
+.services{background:var(--cream);color:var(--dark);padding:120px 80px}
+.services-layout{display:grid;grid-template-columns:300px 1fr;gap:72px;align-items:start}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.svc-card{background:var(--white);padding:42px 36px;position:relative;overflow:hidden;transition:all .4s var(--ease);cursor:default}
+.svc-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--gold),var(--accent));transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-card:hover{background:var(--dark);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.15)}
+.svc-card:hover .svc-num{color:rgba(255,255,255,.04)}
+.svc-card:hover .svc-name{color:var(--white)}
+.svc-card:hover .svc-list li{color:rgba(255,255,255,.45)}
+.svc-num{font-family:var(--serif);font-size:56px;font-weight:300;color:rgba(0,0,0,.05);line-height:1;margin-bottom:var(--sp-3);transition:color .4s}
+.svc-name{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--dark);margin-bottom:20px;transition:color .4s;line-height:1.1}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.svc-list li{font-size:13px;color:var(--mid);font-weight:300;display:flex;align-items:center;gap:var(--sp-3);line-height:1.5;text-transform:capitalize;transition:color .4s}
+.svc-list li::before{content:'';display:block;width:16px;height:1px;background:var(--gold);flex-shrink:0}
+
+/* SLOGAN BAND */
+.slogan-band{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
+.slogan-visual{position:relative;overflow:hidden}
+.slogan-visual img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.slogan-visual:hover img{transform:scale(1.05)}
+.slogan-text{background:var(--dark3);display:flex;flex-direction:column;justify-content:center;padding:88px 72px;border-left:1px solid var(--border)}
+.slogan-line1{font-family:var(--serif);font-size:clamp(20px,2.8vw,40px);font-weight:300;font-style:italic;color:var(--white);line-height:1.48;margin-bottom:var(--sp-5)}
+.slogan-divider{width:52px;height:1px;background:var(--gold);margin-bottom:var(--sp-5)}
+.slogan-line2{font-family:var(--serif);font-size:clamp(16px,2vw,30px);font-weight:300;font-style:italic;color:rgba(255,255,255,.48);line-height:1.48}
+.slogan-line2 strong{color:var(--gold2);font-weight:500}
+
+/* CONTACT BAND */
+.contact-band{background:var(--cream);color:var(--dark);padding:88px 80px;display:flex;align-items:center;justify-content:space-between;gap:60px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.contact-band h3{font-family:var(--serif);font-size:clamp(32px,3.6vw,52px);font-weight:300;color:var(--dark);margin-bottom:var(--sp-3);line-height:1.05}
+.contact-band h3 em{font-style:italic;color:var(--gold)}
+.contact-band p{font-size:15px;color:var(--mid);font-weight:300}
+.btn-outline{display:inline-flex;align-items:center;gap:14px;border:1px solid var(--dark);color:var(--dark);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:18px 48px;text-decoration:none;transition:all .3s var(--ease);white-space:nowrap;flex-shrink:0}
+.btn-outline:hover{background:var(--dark);color:var(--white);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.btn-outline:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.btn-outline svg{transition:transform .3s var(--ease)}
+.btn-outline:hover svg{transform:translateX(5px)}
+
+/* WHY CHOOSE US */
+.why{background:var(--dark);padding:120px 80px}
+.why-top{display:grid;grid-template-columns:1fr 1fr;gap:88px;margin-bottom:80px;align-items:end}
+.why-top p{font-size:16px;color:rgba(255,255,255,.38);font-weight:300;line-height:1.9}
+.why-top p strong{color:rgba(255,255,255,.72);font-weight:500}
+.why-mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:250px 250px;gap:2px;margin-bottom:80px}
+.mosaic-cell{position:relative;overflow:hidden;transition:transform .6s var(--ease)}
+.mosaic-cell:hover{transform:scale(1.01)}
+.mosaic-cell:first-child{grid-row:span 2}
+.mosaic-cell img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.mosaic-cell:hover img{transform:scale(1.06)}
+.mosaic-lbl{position:absolute;bottom:18px;left:20px;z-index:2;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:400;border-left:2px solid var(--gold);padding-left:10px;background:rgba(11,11,9,.5);padding:8px 12px 8px 10px;backdrop-filter:blur(8px)}
+
+/* WHY CARDS */
+.why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px}
+.why-card{background:rgba(255,255,255,.028);padding:42px 28px;border-top:1px solid rgba(255,255,255,.05);transition:all .4s var(--ease)}
+.why-card:hover{background:rgba(192,154,94,.08);transform:translateY(-4px)}
+.why-icon{width:40px;height:40px;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;margin-bottom:var(--sp-5);transition:border-color .3s,background .3s}
+.why-card:hover .why-icon{border-color:var(--gold);background:rgba(192,154,94,.1)}
+.why-card h4{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--white);margin-bottom:14px;line-height:1.2}
+.why-card p{font-size:13px;color:rgba(255,255,255,.36);font-weight:300;line-height:1.72}
+
+/* DISCOVER BAND */
+.discover-band{background:var(--dark);padding:64px 80px;display:flex;justify-content:center;border-top:1px solid rgba(255,255,255,.04)}
+.btn-gold-outline{display:inline-flex;align-items:center;gap:var(--sp-4);border:1px solid var(--gold);color:var(--gold);font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:500;padding:19px 60px;text-decoration:none;transition:all .3s var(--ease)}
+.btn-gold-outline:hover{background:var(--gold);color:var(--dark);transform:translateY(-2px);box-shadow:0 8px 32px rgba(192,154,94,.25)}
+.btn-gold-outline:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.btn-gold-outline svg{transition:transform .3s var(--ease)}
+.btn-gold-outline:hover svg{transform:translateX(6px)}
+
+/* FINAL CTA */
+.final-cta{position:relative;overflow:hidden;min-height:600px;display:flex;align-items:center;justify-content:center}
+.final-bg{position:absolute;inset:0;z-index:0}
+.final-bg img{width:100%;height:100%;object-fit:cover}
+.final-overlay{position:absolute;inset:0;z-index:1;background:rgba(11,11,9,.8)}
+.final-content{position:relative;z-index:2;text-align:center;padding:80px 60px;max-width:740px}
+.final-content .sec-tag{justify-content:center}
+.final-content .sec-tag::before{display:none}
+.final-content .sec-h1{margin-bottom:22px}
+.final-content p{font-size:16px;color:rgba(255,255,255,.44);font-weight:300;line-height:1.85;max-width:520px;margin:0 auto 52px}
+.btn-join{display:inline-flex;align-items:center;gap:var(--sp-4);background:var(--gold);color:var(--dark);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:19px 56px;text-decoration:none;transition:all .3s var(--ease);border:1px solid var(--gold)}
+.btn-join:hover{background:transparent;color:var(--gold);transform:translateY(-2px);box-shadow:0 8px 32px rgba(192,154,94,.25)}
+.btn-join:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.btn-join svg{transition:transform .3s var(--ease)}
+.btn-join:hover svg{transform:translateX(6px)}
+
+/* FOOTER */
+footer{background:var(--dark2);padding:56px 80px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.04)}
+.foot-logo{font-family:var(--serif);font-size:22px;font-weight:400;letter-spacing:.2em;color:var(--white);text-transform:uppercase}
+.foot-logo span{color:var(--gold)}
+.foot-url{font-size:12px;color:rgba(255,255,255,.2);letter-spacing:.1em}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  nav,nav.scrolled{padding:18px 28px}
+  .nav-links{display:none}
+  .hero{padding:0 28px 80px}
+  .hero-stats,.scroll-indicator{display:none}
+  .investor,.opps,.services,.why{padding:80px 28px}
+  .investor{grid-template-columns:1fr}
+  .investor-left{border-right:none;border-bottom:1px solid var(--border);padding-right:0;padding-bottom:56px}
+  .investor-right{padding-left:0;padding-top:56px}
+  .opp-head{flex-direction:column;align-items:flex-start;gap:20px}
+  .opp-grid{grid-template-columns:1fr 1fr}
+  .partner-strip{padding:48px 28px;flex-direction:column;align-items:flex-start}
+  .services-layout{grid-template-columns:1fr}
+  .slogan-band{grid-template-columns:1fr}
+  .slogan-visual{height:320px}
+  .slogan-text{padding:56px 28px}
+  .contact-band{padding:72px 28px;flex-direction:column;align-items:flex-start}
+  .why-top{grid-template-columns:1fr;gap:28px}
+  .why-mosaic{grid-template-rows:180px 180px}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .discover-band{padding:52px 28px}
+  footer{padding:44px 28px;flex-direction:column;gap:12px;text-align:center}
+}
+@media(max-width:640px){
+  .hero h1{font-size:52px}
+  .hero-pills{flex-direction:column;align-items:flex-start}
+  .opp-grid,.svc-grid,.why-grid{grid-template-columns:1fr}
+  .why-mosaic{grid-template-columns:1fr;grid-template-rows:auto}
+  .mosaic-cell:first-child{grid-row:span 1;height:200px}
+  .mosaic-cell{height:170px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo">Emlak<span class="logo-dot">.</span>Realty</a>
+  <ul class="nav-links">
+    <li><a href="#opps">Opportunities</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"><img src="images/hero-skyline.png" alt="Luxury city skyline at twilight"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-stats">
+    <div class="hstat"><div class="hstat-num">10<em>+</em></div><div class="hstat-lbl">Years of Excellence</div></div>
+    <div class="hstat"><div class="hstat-num">500<em>+</em></div><div class="hstat-lbl">Properties Closed</div></div>
+    <div class="hstat"><div class="hstat-num">6</div><div class="hstat-lbl">Investment Categories</div></div>
+  </div>
+  <div class="hero-content">
+    <div class="eyebrow">Est. Emlak Realty</div>
+    <h1>EMLAK <em>REALTY</em></h1>
+    <p class="hero-subtitle">We invest in people, relationships &amp; value</p>
+    <div class="hero-pills">
+      <span class="pill"><span class="pill-dot"></span>Luxury Residences</span>
+      <span class="pill"><span class="pill-dot"></span>Commercial Assets</span>
+      <span class="pill"><span class="pill-dot"></span>Development Opportunities</span>
+      <span class="pill"><span class="pill-dot"></span>Strategic Investments</span>
+    </div>
+    <a href="#opps" class="btn-primary">
+      Explore Opportunities
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+  <div class="scroll-indicator"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- INVESTOR MINDSET -->
+<section class="investor reveal" id="about">
+  <div class="investor-left">
+    <p class="inv-eyebrow">Real Estate With An Investor Mindset</p>
+    <h2>At Emlak Realty,<br>We Build <em>Lasting Value</em></h2>
+    <div class="inv-visual">
+      <img src="images/luxury-villa.png" alt="Modern luxury villa">
+      <div class="inv-visual-caption">Strategic Real Estate</div>
+    </div>
+  </div>
+  <div class="investor-right">
+    <h3>"Building lasting value through strategic, investor-focused real estate."</h3>
+    <ul class="bullet-list">
+      <li>Top-rated brokerage delivering strategic real estate solutions</li>
+      <li>Specializing in luxury homes, commercial assets, and development opportunities</li>
+      <li>Investor-first approach focused on long-term wealth</li>
+      <li>Local expertise with global market reach</li>
+      <li>Simplifying complex real estate transactions</li>
+    </ul>
+  </div>
+</section>
+
+<!-- OPPORTUNITIES -->
+<section class="opps reveal" id="opps">
+  <div class="opp-head">
+    <div>
+      <div class="sec-tag">Investment Portfolio</div>
+      <h2 class="sec-h1">Current Investment <em>Opportunities</em></h2>
+    </div>
+  </div>
+  <p class="cat-label">Categories</p>
+  <div class="opp-grid">
+    <div class="opp-card"><div class="opp-num">01</div><div class="opp-name">Fix &amp; Flip</div><p class="opp-desc">Undervalued properties and maximize profit</p></div>
+    <div class="opp-card"><div class="opp-num">02</div><div class="opp-name">Rental / BRRR</div><p class="opp-desc">Buy, rehab, rent, refinance, repeat strategy.</p></div>
+    <div class="opp-card"><div class="opp-num">03</div><div class="opp-name">Development Site</div><p class="opp-desc">Prime land opportunities for residential or commercial development.</p></div>
+    <div class="opp-card"><div class="opp-num">04</div><div class="opp-name">Commercial</div><p class="opp-desc">Income-generating properties designed for long-term business growth.</p></div>
+    <div class="opp-card"><div class="opp-num">05</div><div class="opp-name">Multifamily</div><p class="opp-desc">Acquire multi-unit properties that generate consistent rental income streams.</p></div>
+    <div class="opp-card"><div class="opp-num">06</div><div class="opp-name">Business Buy &amp; Sell</div><p class="opp-desc">Buy or sell established businesses with strategic valuation and guidance.</p></div>
+  </div>
+</section>
+
+<!-- PARTNER STRIP -->
+<div class="partner-strip reveal">
+  <p>Partner with us to access exclusive listings, expert guidance, and results-driven strategies. Leverage the <strong>non-profit strategic nature of real estate</strong> to guide your decisions with integrity, insight, and strategic planning. Get started with our team today!</p>
+  <a href="#contact" class="btn-dark">Get Started <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7.5 3.5l4 3.5-4 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+
+<!-- SERVICES -->
+<section class="services reveal" id="services">
+  <div class="services-layout">
+    <div>
+      <div class="sec-tag">Expertise</div>
+      <h2 class="sec-h1" style="color:var(--dark)">Advisory &amp;<br><em>Brokerage</em><br>Services</h2>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card"><div class="svc-num">01</div><div class="svc-name">Residential</div><ul class="svc-list"><li>Luxury homes</li><li>Primary residences</li><li>Investment properties</li></ul></div>
+      <div class="svc-card"><div class="svc-num">02</div><div class="svc-name">Development</div><ul class="svc-list"><li>Land acquisition</li><li>Site analysis</li><li>Developer advisory</li></ul></div>
+      <div class="svc-card"><div class="svc-num">03</div><div class="svc-name">Commercial</div><ul class="svc-list"><li>Retail</li><li>Industrial</li><li>Mixed-use</li><li>Office</li></ul></div>
+      <div class="svc-card"><div class="svc-num">04</div><div class="svc-name">Investment</div><ul class="svc-list"><li>Flip opportunities</li><li>BRRRR opportunities</li><li>Portfolio acquisitions</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- SLOGAN -->
+<div class="slogan-band reveal">
+  <div class="slogan-visual"><img src="images/luxury-interior.png" alt="Luxury living room interior"></div>
+  <div class="slogan-text">
+    <p class="slogan-line1">Real estate done right. We bring insider knowledge, smart strategies, and results that speak for themselves.</p>
+    <div class="slogan-divider"></div>
+    <p class="slogan-line2">Smart moves, better investments: <strong>Emlak Realty</strong> makes real estate simple.</p>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-band reveal" id="contact">
+  <div>
+    <h3>Contact Our <em>Expert</em></h3>
+    <p>emlakrealty.com — We're ready when you are.</p>
+  </div>
+  <a href="https://emlakrealty.com" target="_blank" class="btn-outline">
+    Contact Our Expert
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2.5 8h11M8.5 3.5l5 4.5-5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</div>
+
+<!-- WHY CHOOSE US -->
+<section class="why reveal" id="why">
+  <div class="why-top">
+    <div>
+      <div class="sec-tag">Advantage</div>
+      <h2 class="sec-h1">Why Choose <em>Us</em></h2>
+    </div>
+    <p><strong>Luxury real estate</strong> decisions are complex, but with the right <strong>brokerage</strong>, they don't have to be. We provide market intelligence, negotiation expertise, and client-focused strategies that give you an edge.</p>
+  </div>
+  <div class="why-mosaic">
+    <div class="mosaic-cell"><img src="images/commercial-building.png" alt="Urban portfolio"><span class="mosaic-lbl">Urban Portfolio</span></div>
+    <div class="mosaic-cell"><img src="images/aerial-residential.png" alt="Luxury residences"><span class="mosaic-lbl">Luxury Residences</span></div>
+    <div class="mosaic-cell"><img src="images/luxury-villa.png" alt="Commercial assets"><span class="mosaic-lbl">Commercial Assets</span></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L1 5.5v8c0 3.5 3 6.5 8 7.5 5-1 8-4 8-7.5v-8L9 1.5z" stroke="#C09A5E" stroke-width="1.3"/></svg></div>
+      <h4>Local Market Expertise</h4>
+      <p>Deep knowledge of neighborhoods, pricing trends, and demand cycles.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7.5" stroke="#C09A5E" stroke-width="1.3"/><path d="M6 9l2 2 4-4" stroke="#C09A5E" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h4>Strategic Negotiation</h4>
+      <p>We advocate aggressively and intelligently to protect your interests.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 5h12M3 9h12M3 13h8" stroke="#C09A5E" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <h4>Transparent Communication</h4>
+      <p>Clear guidance at every stage of the transaction.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="6" r="3" stroke="#C09A5E" stroke-width="1.3"/><path d="M2 17c0-3.9 3.1-7 7-7s7 3.1 7 7" stroke="#C09A5E" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <h4>Personalized Service</h4>
+      <p>No cookie-cutter approach. Every strategy is goal-oriented.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 14l3-4 3 3 4-6 4 3" stroke="#C09A5E" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h4>Seamless Process</h4>
+      <p>From consultation to closing, we handle the details so you can focus on your future.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DISCOVER BAND -->
+<div class="discover-band reveal">
+  <a href="#opps" class="btn-gold-outline">
+    Discover Exclusive Investment Opportunities
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</div>
+
+<!-- FINAL CTA -->
+<section class="final-cta reveal" id="success">
+  <div class="final-bg"><img src="images/grand-entrance.png" alt="Grand luxury building entrance"></div>
+  <div class="final-overlay"></div>
+  <div class="final-content">
+    <div class="sec-tag">Begin Here</div>
+    <h2 class="sec-h1">Start Your Success Story<br>with <em>Emlak Realty</em></h2>
+    <p>Join a brokerage that prioritizes growth, rewards performance, and opens doors to high-value opportunities.</p>
+    <a href="https://emlakrealty.com" target="_blank" class="btn-join">
+      Join Emlak Realty
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-logo">Emlak<span>.</span>Realty</div>
+  <span class="foot-url">emlakrealty.com</span>
+</footer>
+
+<script>
+// Nav scroll effect
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+
+// Scroll reveal animation
+const revealEls=document.querySelectorAll('.reveal');
+const revealObserver=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObserver.unobserve(e.target)}})
+},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+revealEls.forEach(el=>revealObserver.observe(el));
+
+// Counter animation for hero stats
+function animateCounter(el,target,suffix=''){
+  let current=0;const step=target/40;const timer=setInterval(()=>{
+    current+=step;if(current>=target){current=target;clearInterval(timer)}
+    el.innerHTML=Math.floor(current)+(suffix?'<em>'+suffix+'</em>':'');
+  },35);
+}
+const statObserver=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){
+    const nums=e.target.querySelectorAll('.hstat-num');
+    animateCounter(nums[0],10,'+');animateCounter(nums[1],500,'+');
+    nums[2].innerHTML='6';statObserver.unobserve(e.target);
+  }})},{threshold:0.5});
+const heroStats=document.querySelector('.hero-stats');
+if(heroStats)statObserver.observe(heroStats);
+</script>
+</body>
+</html>
