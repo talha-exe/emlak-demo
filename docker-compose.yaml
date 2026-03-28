@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  emlak-realty:
+    build: .
+    container_name: emlak-realty-container
+    ports:
+      - "7000:80"
+    restart: always
+
+networks:
+  default:
+    name: dokploy-network
+    external: true
