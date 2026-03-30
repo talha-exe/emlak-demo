@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  ::selection { background: rgba(192,154,94,.3); color: #fff; }
+}
+
+@layer components {
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Subtle grid overlay */
+  .hero-grid {
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,.018) 0, rgba(255,255,255,.018) 1px, transparent 1px, transparent 80px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.018) 0, rgba(255,255,255,.018) 1px, transparent 1px, transparent 80px);
+  }
+
+  /* Eyebrow line */
+  .eyebrow-line::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: #C09A5E;
+    flex-shrink: 0;
+  }
+
+  /* Nav link underline */
+  .nav-link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #C09A5E;
+    transition: width 0.3s cubic-bezier(.4,0,.2,1);
+  }
+  .nav-link-underline:hover::after {
+    width: 100%;
+  }
+
+  /* Card bottom accent bar */
+  .card-accent::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #C09A5E, #553F83);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+  }
+  .card-accent:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Bullet line */
+  .bullet-line::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: #C09A5E;
+    flex-shrink: 0;
+    margin-top: 11px;
+    transition: width 0.3s cubic-bezier(.4,0,.2,1);
+  }
+  .bullet-line:hover::before {
+    width: 36px;
+  }
+
+  /* Service list item line */
+  .svc-line::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: #C09A5E;
+    flex-shrink: 0;
+  }
+
+  /* Scroll line animation */
+  .scroll-line-anim {
+    width: 1px;
+    height: 64px;
+    background: linear-gradient(to bottom, rgba(192,154,94,.9), transparent);
+    animation: pulse 2.2s ease-in-out infinite;
+  }
+}
