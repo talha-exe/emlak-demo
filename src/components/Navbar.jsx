@@ -31,6 +31,11 @@ export default function Navbar() {
           }`}>About Us</Link>
         </li>
         <li>
+          <Link href="/buyer-agent" className={`nav-link-underline relative text-xs tracking-[.1em] uppercase font-normal no-underline transition-colors duration-250 ${
+            pathname === '/buyer-agent' ? 'text-gold' : 'text-white/[.48] hover:text-gold'
+          }`}>Buyer Agent</Link>
+        </li>
+        <li>
           <Link href="/residential" className={`nav-link-underline relative text-xs tracking-[.1em] uppercase font-normal no-underline transition-colors duration-250 ${
             pathname === '/residential' ? 'text-gold' : 'text-white/[.48] hover:text-gold'
           }`}>Residential</Link>
@@ -56,6 +61,7 @@ export default function Navbar() {
       {menuOpen && (
         <div className="hidden max-[1100px]:flex fixed inset-0 top-[60px] bg-dark/[.98] backdrop-blur-xl flex-col items-center justify-center gap-8 z-[399]">
           <Link href="/about" onClick={() => setMenuOpen(false)} className="font-serif text-2xl text-white no-underline hover:text-gold transition-colors">About Us</Link>
+          <Link href="/buyer-agent" onClick={() => setMenuOpen(false)} className="font-serif text-2xl text-white no-underline hover:text-gold transition-colors">Buyer Agent</Link>
           <Link href="/residential" onClick={() => setMenuOpen(false)} className="font-serif text-2xl text-white no-underline hover:text-gold transition-colors">Residential</Link>
           <Link href="/about" onClick={() => setMenuOpen(false)} className="text-[11px] tracking-[.14em] uppercase font-medium py-3 px-8 border border-gold text-gold no-underline hover:bg-gold hover:text-dark transition-all">Get Started</Link>
         </div>
