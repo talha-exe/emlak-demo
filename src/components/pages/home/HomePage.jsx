@@ -12,7 +12,7 @@ export default function HomePage() {
 
       {/* ── INVESTOR MINDSET ── */}
       <RevealWrapper>
-        <section id="about" className="bg-cream text-dark py-[120px] px-[80px] grid grid-cols-2 gap-0 max-[1100px]:grid-cols-1 max-[1100px]:py-20 max-[1100px]:px-7">
+        <section id="about" className="bg-cream text-dark py-[120px] px-[80px] grid grid-cols-2 gap-0 max-[1100px]:grid-cols-1 max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="pr-[88px] border-r border-gold/[.18] max-[1100px]:border-r-0 max-[1100px]:border-b max-[1100px]:border-gold/[.18] max-[1100px]:pr-0 max-[1100px]:pb-14">
             <p className="eyebrow-line flex items-center gap-3.5 text-[11px] tracking-[.28em] uppercase text-gold font-medium mb-8">Real Estate With An Investor Mindset</p>
             <h2 className="font-serif text-[clamp(38px,4.2vw,60px)] font-light text-dark leading-[1.05] mb-11">At Emlak Realty,<br />We Build <em className="italic text-gold">Lasting Value</em></h2>
@@ -41,7 +41,7 @@ export default function HomePage() {
 
       {/* ── OPPORTUNITIES ── */}
       <RevealWrapper>
-        <section id="opps" className="bg-dark-2 py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7">
+        <section id="opps" className="bg-dark-2 py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="flex justify-between items-end mb-14 max-[1100px]:flex-col max-[1100px]:items-start max-[1100px]:gap-5">
             <SectionHeader 
               eyebrow="Investment Portfolio" 
@@ -71,7 +71,7 @@ export default function HomePage() {
 
       {/* ── PARTNER STRIP ── */}
       <RevealWrapper>
-        <div className="bg-gradient-to-br from-gold via-[#B8904F] to-gold-light py-14 px-[80px] flex items-center justify-between gap-[60px] relative overflow-hidden max-[1100px]:px-7 max-[1100px]:py-12 max-[1100px]:flex-col max-[1100px]:items-start">
+        <div className="bg-gradient-to-br from-gold via-[#B8904F] to-gold-light py-14 px-[80px] flex items-center justify-between gap-[60px] relative overflow-hidden max-[1100px]:px-[28px] max-[1100px]:py-12 max-[1100px]:flex-col max-[1100px]:items-start">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,rgba(255,255,255,.12),transparent_60%)] pointer-events-none" />
           <p className="text-base text-dark/[.72] font-light leading-[1.85] max-w-[740px] relative z-[1]">Partner with us to access exclusive listings, expert guidance, and results-driven strategies. Leverage the <strong className="text-dark font-semibold italic">non-profit strategic nature of real estate</strong> to guide your decisions with integrity, insight, and strategic planning. Get started with our team today!</p>
           <Link href="/about" className="relative z-[1] inline-flex items-center gap-3 bg-dark text-white text-[11px] tracking-[.14em] uppercase font-medium py-4 px-9 no-underline transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] whitespace-nowrap border border-dark shrink-0 hover:bg-transparent hover:text-dark hover:-translate-y-0.5">
@@ -83,7 +83,7 @@ export default function HomePage() {
 
       {/* ── SERVICES ── */}
       <RevealWrapper>
-        <section id="services" className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7">
+        <section id="services" className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="grid grid-cols-[300px_1fr] gap-[72px] items-start max-[1100px]:grid-cols-1">
             <div>
               <div className="eyebrow-line flex items-center gap-3.5 text-[11px] tracking-[.26em] uppercase text-gold font-medium mb-4">Expertise</div>
@@ -127,7 +127,7 @@ export default function HomePage() {
 
       {/* ── CONTACT BAND ── */}
       <RevealWrapper>
-        <div id="contact" className="bg-cream text-dark py-[88px] px-[80px] flex items-center justify-between gap-[60px] border-t border-gold/[.18] border-b border-b-gold/[.18] max-[1100px]:py-[72px] max-[1100px]:px-7 max-[1100px]:flex-col max-[1100px]:items-start">
+        <div id="contact" className="bg-cream text-dark py-[88px] px-[80px] flex items-center justify-between gap-[60px] border-t border-gold/[.18] border-b border-b-gold/[.18] max-[1100px]:py-[72px] max-[1100px]:px-[28px] max-[1100px]:flex-col max-[1100px]:items-start">
           <div>
             <h3 className="font-serif text-[clamp(32px,3.6vw,52px)] font-light text-dark mb-3 leading-[1.05]">Contact Our <em className="italic text-gold">Expert</em></h3>
             <p className="text-[15px] text-mid font-light">emlakrealty.com — We&apos;re ready when you are.</p>
@@ -141,7 +141,7 @@ export default function HomePage() {
 
       {/* ── WHY CHOOSE US ── */}
       <RevealWrapper>
-        <section id="why" className="bg-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7">
+        <section id="why" className="bg-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="grid grid-cols-2 gap-[88px] mb-20 items-end max-[1100px]:grid-cols-1 max-[1100px]:gap-7">
             <SectionHeader 
               eyebrow="Advantage" 
@@ -186,7 +186,7 @@ export default function HomePage() {
 
       {/* ── DISCOVER BAND ── */}
       <RevealWrapper>
-        <div className="bg-dark py-16 px-[80px] flex justify-center border-t border-white/[.04] max-[1100px]:py-13 max-[1100px]:px-7">
+        <div className="bg-dark py-16 px-[80px] flex justify-center border-t border-white/[.04] max-[1100px]:py-13 max-[1100px]:px-[28px]">
           <Link href="#opps" className="inline-flex items-center gap-4 border border-gold text-gold text-xs tracking-[.15em] uppercase font-medium py-[19px] px-[60px] no-underline transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] hover:bg-gold hover:text-dark hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.25)] group">
             Discover Exclusive Investment Opportunities
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="transition-transform duration-300 group-hover:translate-x-1.5"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>

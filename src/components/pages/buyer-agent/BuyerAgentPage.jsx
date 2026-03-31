@@ -10,7 +10,7 @@ export default function BuyerAgentPage() {
   return (
     <main>
       {/* ── HERO ── */}
-      <section className="h-[85vh] min-h-[600px] relative overflow-hidden flex flex-col justify-end py-0 px-[80px] pb-[100px] max-[1100px]:px-7 max-[1100px]:pb-16">
+      <section className="h-[85vh] min-h-[600px] max-[640px]:min-h-[500px] relative overflow-hidden flex flex-col justify-end p-[0_80px_100px] max-[1100px]:p-[0_28px_64px]">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/buyer-agent-hero.png" 
@@ -26,10 +26,10 @@ export default function BuyerAgentPage() {
           <div className="eyebrow-line flex items-center gap-4 text-[11px] tracking-[.32em] uppercase text-gold font-medium mb-6 animate-fadeUp-d1">
             Buyer Agent
           </div>
-          <h1 className="font-serif text-[clamp(40px,5.5vw,76px)] font-light leading-[1.05] tracking-[-0.01em] text-white mb-6 animate-fadeUp-d2">
+          <h1 className="font-serif text-[clamp(32px,5.5vw,76px)] font-light leading-[1.1] tracking-[-0.01em] text-white mb-6 animate-fadeUp-d2">
             Expert <em className="italic text-gold">Buyer Agent</em> Services
           </h1>
-          <p className="font-serif text-[clamp(16px,2vw,22px)] font-light italic text-white/[.55] mb-10 animate-fadeUp-d3 max-w-[640px]">
+          <p className="font-serif text-[clamp(15px,2vw,22px)] font-light italic text-white/[.55] mb-10 animate-fadeUp-d3 max-w-[640px]">
             Find Properties That Match Your Needs and Long-Term Goals
           </p>
           <div className="flex flex-wrap gap-4 animate-fadeUp-d4">

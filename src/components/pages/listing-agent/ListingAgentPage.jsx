@@ -10,7 +10,7 @@ export default function ListingAgentPage() {
   return (
     <main>
       {/* ── HERO ── */}
-      <section className="h-[85vh] min-h-[600px] relative overflow-hidden flex flex-col justify-end py-0 px-[80px] pb-[100px] max-[1100px]:px-7 max-[1100px]:pb-16">
+      <section className="h-[85vh] min-h-[600px] max-[640px]:min-h-[500px] relative overflow-hidden flex flex-col justify-end p-[0_80px_100px] max-[1100px]:p-[0_28px_64px]">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/listing-agent-hero.png" 
@@ -26,10 +26,10 @@ export default function ListingAgentPage() {
           <div className="eyebrow-line flex items-center gap-4 text-[11px] tracking-[.32em] uppercase text-gold font-medium mb-6 animate-fadeUp-d1">
             Listing Agent
           </div>
-          <h1 className="font-serif text-[clamp(40px,5.5vw,76px)] font-light leading-[1.05] tracking-[-0.01em] text-white mb-6 animate-fadeUp-d2">
+          <h1 className="font-serif text-[clamp(32px,5.5vw,76px)] font-light leading-[1.1] tracking-[-0.01em] text-white mb-6 animate-fadeUp-d2">
             List <em className="italic text-gold">Smart.</em> Sell <em className="italic text-gold">Strong</em>
           </h1>
-          <p className="font-serif text-[clamp(16px,2vw,22px)] font-light italic text-white/[.55] mb-10 animate-fadeUp-d3 max-w-[640px]">
+          <p className="font-serif text-[clamp(15px,2vw,22px)] font-light italic text-white/[.55] mb-10 animate-fadeUp-d3 max-w-[640px]">
             Precision Listing Agent Strategy for Maximum Return
           </p>
           <div className="flex flex-wrap gap-4 animate-fadeUp-d4">
@@ -83,7 +83,7 @@ export default function ListingAgentPage() {
 
       {/* ── NEGOTIATION CONTROL ── */}
       <RevealWrapper>
-        <section className="bg-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7 overflow-hidden">
+        <section className="bg-dark text-white py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7 overflow-hidden">
           <div className="max-w-[1100px] mx-auto">
             <div className="grid grid-cols-[1.2fr_1fr] gap-24 items-center max-[1100px]:grid-cols-1">
               <div>

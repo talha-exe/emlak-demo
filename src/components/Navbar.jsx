@@ -19,7 +19,7 @@ export default function Navbar() {
       scrolled
         ? 'bg-dark/[.96] backdrop-blur-[24px] backdrop-saturate-[1.8] py-4 px-[80px] border-b border-gold/[.18]'
         : 'py-6 px-[80px]'
-    } max-[1100px]:!px-7 max-[1100px]:!py-[18px]`}>
+    } max-[1300px]:px-12 max-[1100px]:!px-7 max-[1100px]:!py-5`}>
       <Link href="/" className="font-serif text-2xl font-medium tracking-[.2em] uppercase text-white no-underline">
         Emlak<span className="text-gold">.</span>Realty
       </Link>

@@ -17,7 +17,7 @@ export default function CTASection({
           <Image src={image} alt={title} fill className="object-cover" />
         </div>
         <div className="absolute inset-0 z-[1] bg-dark/80" />
-        <div className="relative z-[2] text-center py-20 px-[60px] max-w-[740px]">
+        <div className="relative z-[2] text-center p-[80px_24px] max-[1100px]:p-[60px_20px] max-w-[740px] mx-auto">
           <div className="flex items-center justify-center gap-3.5 text-[11px] tracking-[.26em] uppercase text-gold font-medium mb-4">
             {eyebrow}
           </div>

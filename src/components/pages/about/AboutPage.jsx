@@ -8,7 +8,7 @@ export default function AboutPage() {
   return (
     <main>
       {/* ── HERO ── */}
-      <section className="h-[85vh] min-h-[600px] relative overflow-hidden flex flex-col justify-end py-0 px-[80px] pb-[100px] max-[1100px]:px-7 max-[1100px]:pb-16">
+      <section className="h-[85vh] min-h-[600px] max-[640px]:min-h-[500px] relative overflow-hidden flex flex-col justify-end p-[0_80px_100px] max-[1100px]:p-[0_28px_64px]">
         <div className="absolute inset-0 z-0">
           <Image src="/images/about-hero.png" alt="Luxury real estate office" fill priority className="object-cover" />
         </div>
@@ -16,10 +16,10 @@ export default function AboutPage() {
         <div className="hero-grid absolute inset-0 z-[2] pointer-events-none" />
         <div className="relative z-[3] max-w-[820px]">
           <div className="eyebrow-line flex items-center gap-4 text-[11px] tracking-[.32em] uppercase text-gold font-medium mb-6 animate-fadeUp-d1">About Emlak Realty</div>
-          <h1 className="font-serif text-[clamp(36px,5.5vw,72px)] font-light leading-[1.05] tracking-[-0.01em] text-white mb-6 animate-fadeUp-d2">
+          <h1 className="font-serif text-[clamp(32px,5.5vw,72px)] font-light leading-[1.1] tracking-[-0.01em] text-white mb-6 animate-fadeUp-d2">
             We Turn Real Estate Opportunities Into <em className="italic text-gold">Lasting Value</em> For Every Client
           </h1>
-          <p className="font-serif text-[clamp(16px,2vw,22px)] font-light italic text-white/[.55] mb-10 animate-fadeUp-d3 max-w-[640px]">
+          <p className="font-serif text-[clamp(15px,2vw,22px)] font-light italic text-white/[.55] mb-10 animate-fadeUp-d3 max-w-[640px]">
             With market insight, strategic guidance, and a client-first approach, we make every move count.
           </p>
           <Link href="#story" className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 no-underline transition-all duration-300 border border-gold animate-fadeUp-d4 hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
@@ -57,7 +57,7 @@ export default function AboutPage() {
 
       {/* ── OUR STORY ── */}
       <RevealWrapper>
-        <section id="story" className="bg-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7">
+        <section id="story" className="bg-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[820px] mx-auto">
             <SectionHeader 
               eyebrow="Our Journey" 
@@ -86,7 +86,7 @@ export default function AboutPage() {
 
       {/* ── MISSION STATEMENTS ── */}
       <RevealWrapper>
-        <section className="bg-dark-2 py-[100px] px-[80px] max-[1100px]:py-16 max-[1100px]:px-7">
+        <section className="bg-dark-2 py-[100px] px-[80px] max-[1100px]:py-16 max-[1100px]:px-[28px]">
           <div className="max-w-[900px] mx-auto">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-3.5 text-[11px] tracking-[.26em] uppercase text-gold font-medium mb-4">
@@ -171,7 +171,7 @@ export default function AboutPage() {
 
       {/* ── MEET THE TEAM ── */}
       <RevealWrapper>
-        <section className="bg-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7">
+        <section className="bg-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[820px] mx-auto text-center">
             <div className="flex items-center justify-center gap-3.5 text-[11px] tracking-[.26em] uppercase text-gold font-medium mb-4">
               <span className="w-[30px] h-px bg-gold" />Our People<span className="w-[30px] h-px bg-gold" />

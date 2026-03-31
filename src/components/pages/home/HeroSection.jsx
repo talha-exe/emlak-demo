@@ -5,7 +5,7 @@ import StatCounter from '@/components/ui/StatCounter';
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="h-screen min-h-[760px] relative overflow-hidden flex flex-col justify-end py-0 px-[80px] pb-[100px] max-[1100px]:px-7 max-[1100px]:pb-20">
+    <section id="hero" className="h-screen min-h-[760px] max-[640px]:min-h-[640px] relative overflow-hidden flex flex-col justify-end p-[0_80px_100px] max-[1100px]:p-[0_28px_80px]">
       <div className="absolute inset-0 z-0">
         <Image src="/images/hero-skyline.png" alt="Luxury city skyline at twilight" fill priority className="object-cover" />
       </div>
@@ -27,24 +27,24 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-[3] max-w-[960px]">
-        <div className="eyebrow-line flex items-center gap-4 text-[11px] tracking-[.32em] uppercase text-gold font-medium mb-6 animate-fadeUp-d1">
+        <div className="eyebrow-line flex items-center gap-4 text-[10px] tracking-[.32em] uppercase text-gold font-medium mb-6 animate-fadeUp-d1">
           Est. Emlak Realty
         </div>
-        <h1 className="font-serif text-[clamp(64px,9vw,140px)] font-light leading-[.88] tracking-[-0.015em] text-white mb-6 animate-fadeUp-d2 max-[640px]:text-[52px]">
+        <h1 className="font-serif text-[clamp(44px,9vw,140px)] font-light leading-[.9] tracking-[-0.015em] text-white mb-6 animate-fadeUp-d2">
           EMLAK <em className="italic text-gold">REALTY</em>
         </h1>
-        <p className="font-serif text-[clamp(18px,2.2vw,26px)] font-light italic text-white/[.55] mb-11 animate-fadeUp-d3">
+        <p className="font-serif text-[clamp(16px,2.2vw,26px)] font-light italic text-white/[.55] mb-11 animate-fadeUp-d3">
           We invest in people, relationships &amp; value
         </p>
-        <div className="flex flex-wrap gap-3 mb-14 animate-fadeUp-d4 max-[640px]:flex-col max-[640px]:items-start">
+        <div className="flex flex-wrap gap-2.5 mb-14 animate-fadeUp-d4 max-[640px]:mb-10">
           {['Luxury Residences', 'Commercial Assets', 'Development Opportunities', 'Strategic Investments'].map((pill) => (
-            <span key={pill} className="inline-flex items-center gap-2.5 text-[11px] tracking-[.15em] uppercase text-white/60 font-light py-[11px] px-[22px] border border-gold/[.32] bg-gold/[.06] backdrop-blur-[12px] transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] hover:border-gold hover:text-gold-light hover:bg-gold/[.14] hover:-translate-y-0.5">
-              <span className="w-[5px] h-[5px] rounded-full bg-gold shrink-0" />
+            <span key={pill} className="inline-flex items-center gap-2.5 text-[9px] tracking-[.15em] uppercase text-white/60 font-light py-[10px] px-[20px] border border-gold/[.32] bg-gold/[.06] backdrop-blur-[12px] transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] hover:border-gold hover:text-gold-light hover:bg-gold/[.14] hover:-translate-y-0.5 max-[400px]:text-[8px] max-[400px]:px-4">
+              <span className="w-[4px] h-[4px] rounded-full bg-gold shrink-0" />
               {pill}
             </span>
           ))}
         </div>
-        <Link href="#opps" className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-[52px] no-underline transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] border border-gold animate-fadeUp-d5 hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
+        <Link href="#opps" className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-[52px] no-underline transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] border border-gold animate-fadeUp-d5 hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group max-[640px]:w-full max-[640px]:justify-center">
           Explore Opportunities
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="transition-transform duration-300 group-hover:translate-x-1.5"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
         </Link>

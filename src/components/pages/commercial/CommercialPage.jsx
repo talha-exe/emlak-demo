@@ -10,7 +10,7 @@ export default function CommercialPage() {
   return (
     <main>
       {/* ── HERO ── */}
-      <section className="h-[85vh] min-h-[600px] relative overflow-hidden flex flex-col justify-end py-0 px-[80px] pb-[100px] max-[1100px]:px-7 max-[1100px]:pb-16">
+      <section className="h-[85vh] min-h-[600px] max-[640px]:min-h-[500px] relative overflow-hidden flex flex-col justify-end p-[0_80px_100px] max-[1100px]:p-[0_28px_64px]">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/commercial-hero.png" 
@@ -23,13 +23,13 @@ export default function CommercialPage() {
         <div className="absolute inset-0 z-[1] bg-gradient-to-b from-dark/20 via-dark/60 via-50% to-dark" />
         <div className="hero-grid absolute inset-0 z-[2] pointer-events-none" />
         <div className="relative z-[3] max-w-[940px]">
-          <div className="eyebrow-line flex items-center gap-4 text-[11px] tracking-[.32em] uppercase text-gold font-medium mb-6 animate-fadeUp-d1">
+          <div className="eyebrow-line flex items-center gap-4 text-[10px] tracking-[.32em] uppercase text-gold font-medium mb-6 animate-fadeUp-d1">
             Commercial Services
           </div>
-          <h1 className="font-serif text-[clamp(40px,5.5vw,76px)] font-light leading-[1.05] tracking-[-0.01em] text-white mb-6 animate-fadeUp-d2">
+          <h1 className="font-serif text-[clamp(32px,5.5vw,76px)] font-light leading-[1.1] tracking-[-0.01em] text-white mb-6 animate-fadeUp-d2">
             Commercial <em className="italic text-gold">Services</em>
           </h1>
-          <p className="font-serif text-[clamp(16px,2vw,22px)] font-light italic text-white/[.55] mb-10 animate-fadeUp-d3 max-w-[740px]">
+          <p className="font-serif text-[clamp(15px,2vw,22px)] font-light italic text-white/[.55] mb-10 animate-fadeUp-d3 max-w-[740px]">
             Expert Representation For High-Value Commercial Property Opportunities
           </p>
           <div className="flex flex-wrap gap-4 animate-fadeUp-d4">
