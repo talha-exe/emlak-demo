@@ -27,7 +27,9 @@ export default function CTASection({
             ) : title}
           </h2>
           <p className="text-base text-white/[.44] font-light leading-[1.85] max-w-[520px] mx-auto mb-13">
-            {subtitle}
+            {typeof subtitle === 'string' ? (
+              <span dangerouslySetInnerHTML={{ __html: subtitle }} />
+            ) : subtitle}
           </p>
           <a href={buttonLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-14 no-underline transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.25)] group">
             {buttonText}
