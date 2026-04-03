@@ -50,9 +50,7 @@ export default function ResidentialPage() {
       <RevealWrapper>
         <section className="bg-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7">
           <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3.5 text-[11px] tracking-[.26em] uppercase text-gold font-medium mb-4">
-              <span className="w-[30px] h-px bg-gold" />Represented<span className="w-[30px] h-px bg-gold" />
-            </div>
+
             <h2 className="font-serif text-[clamp(28px,3.8vw,52px)] font-light text-white leading-[1.1] max-w-[800px] mx-auto">Residential Property <em className="italic text-gold">Solutions</em> for Every Lifestyle</h2>
           </div>
           
@@ -204,9 +202,9 @@ export default function ResidentialPage() {
                 ))}
               </div>
             </div>
-            <div className="mt-20 text-center">
-              <p className="font-serif text-[clamp(20px,3vw,32px)] font-light italic text-white/[.8] leading-[1.4]">
-                &ldquo;Our reputation is built on meticulous preparation, professional expertise, and consistently measurable <em className="italic text-gold">results that clients can trust.</em>&rdquo;
+            <div className="mt-16 border-t border-white/[.08] pt-12">
+              <p className="text-[16px] font-light text-white/[.55] leading-[1.8]">
+                Our reputation is built on meticulous preparation, professional expertise, and consistently measurable results that clients can trust.
               </p>
             </div>
           </div>

@@ -22,7 +22,6 @@ export default function HomePage() {
             </div>
           </div>
           <div className="pl-[88px] max-[1100px]:pl-0 max-[1100px]:pt-14">
-            <h3 className="font-serif text-[clamp(20px,2vw,28px)] font-normal italic text-mid mb-10 leading-[1.45]">&quot;Building lasting value through strategic, investor-focused real estate.&quot;</h3>
             <ul className="list-none">
               {['Top-rated brokerage delivering strategic real estate solutions',
                 'Specializing in luxury homes, commercial assets, and development opportunities',
@@ -53,7 +52,7 @@ export default function HomePage() {
           <div className="grid grid-cols-3 gap-[2px] max-[1100px]:grid-cols-2 max-[640px]:grid-cols-1">
             {[
               { num: '01', name: 'Fix & Flip', desc: 'Undervalued properties and maximize profit' },
-              { num: '02', name: 'Rental / BRRR', desc: 'Buy, rehab, rent, refinance, repeat strategy.' },
+              { num: '02', name: 'BRRR Rental Properties', desc: 'Buy, rehab, rent, refinance, repeat strategy.' },
               { num: '03', name: 'Development Site', desc: 'Prime land opportunities for residential or commercial development.' },
               { num: '04', name: 'Commercial', desc: 'Income-generating properties designed for long-term business growth.' },
               { num: '05', name: 'Multifamily', desc: 'Acquire multi-unit properties that generate consistent rental income streams.' },

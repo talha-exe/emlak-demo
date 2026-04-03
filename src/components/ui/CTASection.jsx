@@ -21,7 +21,7 @@ export default function CTASection({
           <div className="flex items-center justify-center gap-3.5 text-[11px] tracking-[.26em] uppercase text-gold font-medium mb-4">
             {eyebrow}
           </div>
-          <h2 className="font-serif text-[clamp(32px,4.8vw,64px)] font-light leading-[1.05] mb-[22px] text-white">
+          <h2 className="font-serif text-[clamp(20px,2.8vw,36px)] font-light leading-[1.3] mb-[22px] text-white">
             {typeof title === 'string' ? (
               <span dangerouslySetInnerHTML={{ __html: title }} />
             ) : title}

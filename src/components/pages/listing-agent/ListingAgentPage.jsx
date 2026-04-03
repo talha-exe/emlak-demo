@@ -291,15 +291,7 @@ export default function ListingAgentPage() {
                     &ldquo;We do not chase transactions. <br/><em className="italic text-gold">We protect value.</em>&rdquo;
                   </p>
                 </div>
-                <p className="text-[15px] text-mid font-light leading-[1.8]">
-                  Schedule your private consultation with Emlak Realty today and approach your sale with precision, confidence, and control.
-                </p>
-                <div className="flex flex-col gap-6">
-                   <a href="https://emlakrealty.com" className="inline-flex items-center gap-6 text-dark font-serif text-[clamp(20px,2vw,28px)] italic group no-underline">
-                    Schedule a private consultation
-                    <span className="w-12 h-px bg-gold group-hover:w-16 transition-all duration-300" />
-                  </a>
-                </div>
+
               </div>
             </div>
           </div>
@@ -310,7 +302,7 @@ export default function ListingAgentPage() {
       <CTASection 
         eyebrow="Listing Services"
         title='Because Selling Should Never <em className="italic text-gold">Feel Uncertain;</em> It Should <em className="italic text-gold">Feel Strategic.</em>'
-        subtitle="Schedule your private consultation with Emlak Realty today and approach your sale with precision, confidence, and control."
+        subtitle=""
         buttonText="Schedule a private consultation"
       />
     </main>

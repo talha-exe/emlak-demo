@@ -77,8 +77,8 @@ export default function BuyerAgentPage() {
                   ))}
                 </div>
                 <div className="pt-8 border-t border-dark/[0.08] space-y-6">
-                  <p className="font-serif text-[clamp(20px,2.2vw,28px)] italic text-dark leading-tight">
-                    Buying a house without a real estate agent can be <em className="italic text-gold">costly.</em>
+                  <p className="text-base text-mid font-light leading-relaxed">
+                    Buying a house without a real estate agent can be costly.
                   </p>
                   <p className="text-base text-mid font-light leading-relaxed">
                     Partner with our experts to make smart, confident decisions. We secure your capital, structure your offer intelligently, and make sure your purchase is in line with your long-term objectives.
@@ -379,9 +379,9 @@ export default function BuyerAgentPage() {
 
       {/* ── FINAL CTA ── */}
       <CTASection 
-        eyebrow="Start Your Journey"
-        title='Approach your next purchase with <br/><em className="italic text-gold">clarity, confidence, and control.</em>'
-        subtitle="Schedule your private consultation with Emlak Realty today and let us turn your buying journey into a strategic success."
+        eyebrow="Private Consultation"
+        title='Schedule your private consultation with Emlak Realty today and approach your next purchase with clarity, confidence, and control.'
+        subtitle="Your acquisition deserves nothing less."
         buttonText="Get Started Today"
       />
     </main>

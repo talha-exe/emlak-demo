@@ -94,16 +94,9 @@ export default function AboutPage() {
               </div>
               <h2 className="font-serif text-[clamp(28px,3.5vw,48px)] font-light text-white leading-[1.05]">Mission <em className="italic text-gold">Statements</em></h2>
             </div>
-            <div className="grid grid-cols-1 gap-6">
-              {[
-                'We strive to transform real estate experiences through trust, transparency, and strategic insight, empowering clients to make confident decisions.',
-                'Our mission is to deliver smart, ethical, and personalized real estate solutions that create lasting value for clients and communities alike.',
-              ].map((mission, i) => (
-                <div key={i} className="border-l-2 border-gold bg-white/[.03] backdrop-blur-sm p-10 max-[640px]:p-6">
-                  <p className="font-serif text-[clamp(16px,1.8vw,22px)] font-light italic text-white/[.7] leading-[1.7]">{mission}</p>
-                </div>
-              ))}
-            </div>
+            <div className="border-l-2 border-gold bg-white/[.03] backdrop-blur-sm p-10 max-[640px]:p-6">
+                <p className="font-serif text-[clamp(16px,1.8vw,22px)] font-light italic text-white/[.7] leading-[1.7]">We strive to transform real estate experiences through trust, transparency, and strategic insight, empowering clients to make confident decisions.</p>
+              </div>
           </div>
         </section>
       </RevealWrapper>
