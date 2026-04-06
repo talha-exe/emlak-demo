@@ -69,15 +69,15 @@ export default function TenantRepresentationPage() {
               </div>
             </div>
             <div className="bg-white p-12 border border-gold/[.15] shadow-[0_24px_48px_rgba(0,0,0,.04)]">
-              <p className="text-[18px] text-dark font-light leading-[1.8] italic mb-8">
-                &ldquo;Work with Emlak Realty and gain a strategic advisor who understands both the real estate market and the financial impact of lease decisions.&rdquo;
+              <p className="text-[15px] text-mid font-light leading-[1.8] mb-8">
+                Work with Emlak Realty and gain a strategic advisor who understands both the real estate market and the financial impact of lease decisions.
               </p>
               <div className="w-12 h-px bg-gold/40 mb-8" />
-              <p className="font-serif text-2xl text-dark mb-10 leading-tight">Tenant Representation That Positions You for Stronger Lease Terms and Smarter Space Decisions</p>
-              <Link href="https://emlakrealty.com" className="inline-flex items-center gap-3 text-gold text-[11px] tracking-[.15em] uppercase font-bold group">
+              <p className="font-serif text-[clamp(20px,2.4vw,30px)] font-light italic text-dark mb-10 leading-[1.4]">Tenant Representation That Positions You for <em className="not-italic text-gold">Stronger Lease Terms</em> and <em className="not-italic text-gold">Smarter Space Decisions</em></p>
+              <a href="https://emlakrealty.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-transparent text-gold text-[11px] tracking-[.16em] uppercase font-semibold py-[16px] px-10 no-underline transition-all duration-300 border border-gold hover:bg-gold hover:text-dark hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
                 Contact Our Expert
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="transition-transform duration-300 group-hover:translate-x-1.5"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </Link>
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" className="transition-transform duration-300 group-hover:translate-x-1.5"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </a>
             </div>
           </div>
         </section>
