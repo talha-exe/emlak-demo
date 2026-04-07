@@ -68,6 +68,11 @@ export default function Navbar() {
                   pathname === '/commercial-lease-property' ? 'text-gold' : 'text-white/60 hover:text-gold'
                 }`}>Commercial Lease Property</Link>
               </li>
+              <li>
+                <Link href="/commercial-buy-sell" className={`text-[10px] tracking-[.14em] uppercase no-underline transition-colors block ${
+                  pathname === '/commercial-buy-sell' ? 'text-gold' : 'text-white/60 hover:text-gold'
+                }`}>Commercial Buy & Sell</Link>
+              </li>
             </ul>
           </div>
         </li>
@@ -114,10 +119,11 @@ export default function Navbar() {
                 <path d="M1 1.5L4 4.5L7 1.5" stroke="gold" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
-            <div className={`flex flex-col items-center gap-4 mt-4 overflow-hidden transition-all duration-300 ${mobileCommercialOpen ? 'max-h-[300px] opacity-100 mt-6' : 'max-h-0 opacity-0'}`}>
+            <div className={`flex flex-col items-center gap-4 mt-4 overflow-hidden transition-all duration-300 ${mobileCommercialOpen ? 'max-h-[400px] opacity-100 mt-6' : 'max-h-0 opacity-0'}`}>
               <Link href="/commercial-services" onClick={() => setMenuOpen(false)} className="text-sm text-white/50 no-underline hover:text-gold transition-colors uppercase tracking-[.15em]">Commercial Services</Link>
               <Link href="/tenant-representation" onClick={() => setMenuOpen(false)} className="text-sm text-white/50 no-underline hover:text-gold transition-colors uppercase tracking-[.15em]">Tenant Representation</Link>
               <Link href="/commercial-lease-property" onClick={() => setMenuOpen(false)} className="text-sm text-white/50 no-underline hover:text-gold transition-colors uppercase tracking-[.15em]">Commercial Lease Property</Link>
+              <Link href="/commercial-buy-sell" onClick={() => setMenuOpen(false)} className="text-sm text-white/50 no-underline hover:text-gold transition-colors uppercase tracking-[.15em]">Commercial Buy & Sell</Link>
             </div>
           </div>
 
