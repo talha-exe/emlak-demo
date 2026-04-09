@@ -86,6 +86,11 @@ export default function Navbar() {
             pathname === '/listing-agent' ? 'text-gold' : 'text-white/[.48] hover:text-gold'
           }`}>Listing Agent</Link>
         </li>
+        <li>
+          <Link href="/multi-family" className={`nav-link-underline relative text-xs tracking-[.1em] uppercase font-normal no-underline transition-colors duration-250 ${
+            pathname === '/multi-family' ? 'text-gold' : 'text-white/[.48] hover:text-gold'
+          }`}>Multi Family</Link>
+        </li>
       </ul>
 
       <Link href="/about" className="nav-cta text-[11px] tracking-[.14em] uppercase font-medium py-3 px-8 border border-gold text-gold bg-transparent no-underline transition-all duration-300 hover:bg-gold hover:text-dark focus-visible:outline-2 focus-visible:outline-gold-light focus-visible:outline-offset-[3px] max-[1100px]:hidden">
@@ -129,6 +134,7 @@ export default function Navbar() {
 
           <Link href="/buyer-agent" onClick={() => setMenuOpen(false)} className="font-serif text-2xl text-white no-underline hover:text-gold transition-colors">Buyer Agent</Link>
           <Link href="/listing-agent" onClick={() => setMenuOpen(false)} className="font-serif text-2xl text-white no-underline hover:text-gold transition-colors">Listing Agent</Link>
+          <Link href="/multi-family" onClick={() => setMenuOpen(false)} className="font-serif text-2xl text-white no-underline hover:text-gold transition-colors">Multi Family</Link>
 
           <Link href="/about" onClick={() => setMenuOpen(false)} className="text-[11px] tracking-[.14em] uppercase font-medium py-3 px-8 border border-gold text-gold no-underline hover:bg-gold hover:text-dark transition-all">Get Started</Link>
         </div>
