@@ -9,11 +9,11 @@ export default function CommercialBuySellPage() {
   return (
     <main>
       {/* ── HERO ── */}
-      <section className="h-[85vh] min-h-[600px] max-[640px]:min-h-[500px] relative overflow-hidden flex flex-col justify-end p-[0_80px_100px] max-[1100px]:p-[0_28px_64px]">
+      <section className="h-screen min-h-[750px] max-[640px]:min-h-[600px] relative overflow-hidden flex flex-col justify-end p-[100px_80px_100px] max-[1100px]:p-[80px_28px_64px]">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/commercial-hero.png" 
-            alt="Commercial buy and sell strategy" 
+            src="/images/commercial-buy-sell.png" 
+            alt="Strategic commercial real estate transactions" 
             fill 
             priority 
             className="object-cover" 

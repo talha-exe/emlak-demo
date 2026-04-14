@@ -5,7 +5,7 @@ import StatCounter from '@/components/ui/StatCounter';
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="h-screen min-h-[760px] max-[640px]:min-h-[640px] relative overflow-hidden flex flex-col justify-end p-[0_80px_100px] max-[1100px]:p-[0_28px_80px]">
+    <section id="hero" className="h-screen min-h-[760px] max-[640px]:min-h-[640px] relative overflow-hidden flex flex-col justify-end p-[100px_80px_100px] max-[1100px]:p-[80px_28px_80px]">
       <div className="absolute inset-0 z-0">
         <Image src="/images/hero-skyline.png" alt="Luxury city skyline at twilight" fill priority className="object-cover" />
       </div>

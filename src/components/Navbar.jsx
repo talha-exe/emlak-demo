@@ -122,6 +122,11 @@ export default function Navbar() {
             pathname === '/land-development' ? 'text-gold' : 'text-white/[.48] hover:text-gold'
           }`}>Land Development</Link>
         </li>
+        <li>
+          <Link href="/rental" className={`nav-link-underline relative text-[11px] tracking-[.08em] uppercase font-normal no-underline transition-colors duration-250 whitespace-nowrap ${
+            pathname === '/rental' ? 'text-gold' : 'text-white/[.48] hover:text-gold'
+          }`}>Rental</Link>
+        </li>
       </ul>
 
       <Link href="/about" className="nav-cta text-[11px] tracking-[.08em] uppercase font-medium py-2.5 px-6 border border-gold text-gold bg-transparent no-underline transition-all duration-300 hover:bg-gold hover:text-dark focus-visible:outline-2 focus-visible:outline-gold-light focus-visible:outline-offset-[3px] max-[1100px]:hidden whitespace-nowrap">
@@ -182,6 +187,7 @@ export default function Navbar() {
           <Link href="/multi-family" onClick={() => setMenuOpen(false)} className="font-serif text-2xl text-white no-underline hover:text-gold transition-colors">Multi Family</Link>
           <Link href="/bizbuy-sell" onClick={() => setMenuOpen(false)} className="font-serif text-2xl text-white no-underline hover:text-gold transition-colors">BizBuy Sell</Link>
           <Link href="/land-development" onClick={() => setMenuOpen(false)} className="font-serif text-2xl text-white no-underline hover:text-gold transition-colors">Land Development</Link>
+          <Link href="/rental" onClick={() => setMenuOpen(false)} className="font-serif text-2xl text-white no-underline hover:text-gold transition-colors">Rental</Link>
 
           <Link href="/about" onClick={() => setMenuOpen(false)} className="text-[11px] tracking-[.14em] uppercase font-medium py-3 px-8 border border-gold text-gold no-underline hover:bg-gold hover:text-dark transition-all">Get Started</Link>
         </div>
