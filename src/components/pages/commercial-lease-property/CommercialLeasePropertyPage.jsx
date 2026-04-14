@@ -12,7 +12,7 @@ export default function CommercialLeasePropertyPage() {
       <section className="h-screen min-h-[750px] max-[640px]:min-h-[600px] relative overflow-hidden flex flex-col justify-end p-[100px_80px_100px] max-[1100px]:p-[80px_28px_64px]">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/commercial-lease-property.png" 
+            src="/images/commercial-hero.png" 
             alt="Commercial leasing and property management" 
             fill 
             priority 
