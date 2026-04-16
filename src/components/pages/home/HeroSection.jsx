@@ -5,7 +5,7 @@ import StatCounter from '@/components/ui/StatCounter';
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="h-screen min-h-[760px] max-[640px]:min-h-[640px] relative overflow-hidden flex flex-col justify-end p-[100px_80px_100px] max-[1100px]:p-[80px_28px_80px]">
+    <section id="hero" className="h-screen min-h-[760px] max-[640px]:min-h-[640px] relative overflow-hidden flex flex-col justify-center p-[100px_80px_100px] max-[1100px]:p-[80px_28px_80px]">
       <div className="absolute inset-0 z-0">
         <Image src="/images/hero-skyline.png" alt="Luxury city skyline at twilight" fill priority className="object-cover" />
       </div>
@@ -27,9 +27,7 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-[3] max-w-[960px]">
-        <div className="eyebrow-line flex items-center gap-4 text-[10px] tracking-[.32em] uppercase text-gold font-medium mb-6 animate-fadeUp-d1">
-          Est. Emlak Realty
-        </div>
+
         <h1 className="font-serif text-[clamp(44px,9vw,140px)] font-light leading-[.9] tracking-[-0.015em] text-white mb-6 animate-fadeUp-d2">
           EMLAK <em className="italic text-gold">REALTY</em>
         </h1>

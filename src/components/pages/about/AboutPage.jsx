@@ -8,14 +8,14 @@ export default function AboutPage() {
   return (
     <main>
       {/* ── HERO ── */}
-      <section className="h-screen min-h-[750px] max-[640px]:min-h-[600px] relative overflow-hidden flex flex-col justify-end p-[100px_80px_100px] max-[1100px]:p-[80px_28px_64px]">
+      <section className="h-screen min-h-[750px] max-[640px]:min-h-[600px] relative overflow-hidden flex flex-col justify-center p-[100px_80px_100px] max-[1100px]:p-[80px_28px_64px]">
         <div className="absolute inset-0 z-0">
           <Image src="/images/about-hero.png" alt="Luxury real estate office" fill priority className="object-cover" />
         </div>
         <div className="absolute inset-0 z-[1] bg-gradient-to-b from-dark/20 via-dark/60 via-50% to-dark" />
         <div className="hero-grid absolute inset-0 z-[2] pointer-events-none" />
         <div className="relative z-[3] max-w-[820px]">
-          <div className="eyebrow-line flex items-center gap-4 text-[11px] tracking-[.32em] uppercase text-gold font-medium mb-6 animate-fadeUp-d1">About Emlak Realty</div>
+
           <h1 className="font-serif text-[clamp(32px,5.5vw,72px)] font-light leading-[1.1] tracking-[-0.01em] text-white mb-6 animate-fadeUp-d2">
             We Turn Real Estate Opportunities Into <em className="italic text-gold">Lasting Value</em> For Every Client
           </h1>
