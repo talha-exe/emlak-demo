@@ -8,8 +8,10 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [commercialOpen, setCommercialOpen] = useState(false);
   const [residentialOpen, setResidentialOpen] = useState(false);
+  const [rentalOpen, setRentalOpen] = useState(false);
   const [mobileCommercialOpen, setMobileCommercialOpen] = useState(false);
   const [mobileResidentialOpen, setMobileResidentialOpen] = useState(false);
+  const [mobileRentalOpen, setMobileRentalOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -122,10 +124,34 @@ export default function Navbar() {
             pathname === '/land-development' ? 'text-gold' : 'text-white/[.48] hover:text-gold'
           }`}>Land Development</Link>
         </li>
-        <li>
-          <Link href="/rental" className={`nav-link-underline relative text-[11px] tracking-[.08em] uppercase font-normal no-underline transition-colors duration-250 whitespace-nowrap ${
-            pathname === '/rental' ? 'text-gold' : 'text-white/[.48] hover:text-gold'
-          }`}>Rental</Link>
+        <li 
+          className="relative group flex items-center"
+          onMouseEnter={() => setRentalOpen(true)}
+          onMouseLeave={() => setRentalOpen(false)}
+        >
+          <div role="button" tabIndex={0} className={`nav-link-underline relative text-[11px] tracking-[.08em] uppercase font-normal transition-colors duration-250 cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
+            pathname === '/rental' || pathname === '/property-management' ? 'text-gold' : 'text-white/[.48] group-hover:text-gold'
+          }`}>
+            Rental
+            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" className={`transition-transform duration-300 ${rentalOpen ? 'rotate-180' : ''}`}>
+              <path d="M1 1.5L4 4.5L7 1.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          
+          <div className={`absolute top-full -right-4 pt-6 transition-all duration-300 ${rentalOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'}`}>
+            <ul className="bg-dark/[.98] backdrop-blur-xl border border-gold/20 p-5 min-w-[220px] shadow-[0_20px_40px_rgba(0,0,0,.4)] flex flex-col gap-4">
+              <li>
+                <Link href="/rental" className={`text-[10px] tracking-[.14em] uppercase no-underline transition-colors block ${
+                  pathname === '/rental' ? 'text-gold' : 'text-white/60 hover:text-gold'
+                }`}>Rental Overview</Link>
+              </li>
+              <li>
+                <Link href="/property-management" className={`text-[10px] tracking-[.14em] uppercase no-underline transition-colors block ${
+                  pathname === '/property-management' ? 'text-gold' : 'text-white/60 hover:text-gold'
+                }`}>Property Management</Link>
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
 
@@ -187,7 +213,22 @@ export default function Navbar() {
           <Link href="/multi-family" onClick={() => setMenuOpen(false)} className="font-serif text-2xl text-white no-underline hover:text-gold transition-colors">Multi Family</Link>
           <Link href="/bizbuy-sell" onClick={() => setMenuOpen(false)} className="font-serif text-2xl text-white no-underline hover:text-gold transition-colors">BizBuy Sell</Link>
           <Link href="/land-development" onClick={() => setMenuOpen(false)} className="font-serif text-2xl text-white no-underline hover:text-gold transition-colors">Land Development</Link>
-          <Link href="/rental" onClick={() => setMenuOpen(false)} className="font-serif text-2xl text-white no-underline hover:text-gold transition-colors">Rental</Link>
+          
+          <div className="flex flex-col items-center">
+            <button 
+              onClick={() => setMobileRentalOpen(!mobileRentalOpen)}
+              className="font-serif text-2xl text-white flex items-center gap-3 bg-transparent border-none cursor-pointer"
+            >
+              Rental
+              <svg width="14" height="10" viewBox="0 0 8 6" fill="none" className={`transition-transform duration-300 ${mobileRentalOpen ? 'rotate-180' : ''}`}>
+                <path d="M1 1.5L4 4.5L7 1.5" stroke="gold" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            <div className={`flex flex-col items-center gap-4 mt-4 overflow-hidden transition-all duration-300 ${mobileRentalOpen ? 'max-h-[400px] opacity-100 mt-6' : 'max-h-0 opacity-0'}`}>
+              <Link href="/rental" onClick={() => setMenuOpen(false)} className="text-sm text-white/50 no-underline hover:text-gold transition-colors uppercase tracking-[.15em]">Rental Overview</Link>
+              <Link href="/property-management" onClick={() => setMenuOpen(false)} className="text-sm text-white/50 no-underline hover:text-gold transition-colors uppercase tracking-[.15em]">Property Management</Link>
+            </div>
+          </div>
 
           <Link href="/about" onClick={() => setMenuOpen(false)} className="text-[11px] tracking-[.14em] uppercase font-medium py-3 px-8 border border-gold text-gold no-underline hover:bg-gold hover:text-dark transition-all">Get Started</Link>
         </div>
