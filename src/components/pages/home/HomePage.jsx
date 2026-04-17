@@ -60,7 +60,7 @@ export default function HomePage() {
               { num: '06', name: 'Business Buy & Sell', items: ['Restaurants and cafes', 'Retail stores and franchises', 'Service-based businesses', 'Hospitality businesses'] },
             ].map((card) => (
               <div key={card.num} className="card-accent relative overflow-hidden bg-white/[.03] p-[52px_44px] border-t border-white/[.04] transition-all duration-400 ease-[cubic-bezier(.4,0,.2,1)] cursor-default hover:bg-gold/[.08] group">
-                <div className="font-serif text-[72px] font-light text-white/[.04] leading-none mb-[18px] transition-colors duration-400 group-hover:text-gold/[.14]">{card.num}</div>
+                <div className="font-serif text-[72px] font-light text-white/20 leading-none mb-[18px] transition-colors duration-400 group-hover:text-gold/40">{card.num}</div>
                 <div className="font-serif text-[26px] font-normal text-white mb-6 transition-colors duration-400 group-hover:text-gold-light">{card.name}</div>
                 <ul className="list-none flex flex-col gap-2.5">
                   {card.items.map((item, i) => (
@@ -103,12 +103,12 @@ export default function HomePage() {
                 { num: '03', name: 'Development', items: ['Land acquisition', 'site analysis', 'developer advisory'] },
                 { num: '04', name: 'Investment', items: ['Flip opportunities', 'BRRRR opportunities', 'portfolio acquisitions'] },
               ].map((svc) => (
-                <div key={svc.num} className="card-accent relative overflow-hidden bg-white p-[42px_36px] transition-all duration-400 ease-[cubic-bezier(.4,0,.2,1)] cursor-default hover:bg-dark hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,.15)] group">
-                  <div className="font-serif text-[56px] font-light text-black/[.05] leading-none mb-3 transition-colors duration-400 group-hover:text-white/[.04]">{svc.num}</div>
-                  <div className="font-serif text-2xl font-normal text-dark mb-5 transition-colors duration-400 leading-[1.1] group-hover:text-white">{svc.name}</div>
+                <div key={svc.num} className="card-accent relative overflow-hidden bg-white p-[42px_36px] transition-all duration-300 cursor-default hover:bg-gold/5 hover:border-gold/30 hover:shadow-[0_16px_40px_rgba(0,0,0,.06)] border border-dark/[.06] group">
+                  <div className="font-serif text-[56px] font-light text-gold/30 leading-none mb-3">{svc.num}</div>
+                  <div className="font-serif text-2xl font-normal text-dark mb-5 transition-colors duration-300 leading-[1.1] group-hover:text-gold">{svc.name}</div>
                   <ul className="list-none flex flex-col gap-2.5">
                     {svc.items.map((item, i) => (
-                      <li key={i} className="svc-line flex items-center gap-3 text-[13px] text-mid font-light leading-[1.5] capitalize transition-colors duration-400 group-hover:text-white/[.45]">{item}</li>
+                      <li key={i} className="svc-line flex items-center gap-3 text-[13px] text-mid font-light leading-[1.5] capitalize">{item}</li>
                     ))}
                   </ul>
                 </div>

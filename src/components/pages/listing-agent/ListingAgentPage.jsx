@@ -126,7 +126,7 @@ export default function ListingAgentPage() {
                   }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-12 group">
-                    <div className="font-serif text-[48px] font-light text-gold/10 group-hover:text-gold/40 transition-colors leading-none">0{item.step}</div>
+                    <div className="font-serif text-[48px] font-light text-gold/40 group-hover:text-gold transition-colors leading-none">0{item.step}</div>
                     <div className="pb-12 border-b border-dark/5 w-full">
                       <h3 className="font-serif text-2xl font-normal text-dark mb-5 transition-colors group-hover:text-gold">{item.title}</h3>
                       <p className="text-[15px] text-mid font-light leading-[1.8]">{item.content}</p>

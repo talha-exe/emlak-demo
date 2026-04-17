@@ -85,7 +85,7 @@ export default function CommercialLeasePropertyPage() {
             <div className="grid grid-cols-1 gap-0">
               {frameworkSteps.map((title, i) => (
                 <div key={i} className="group grid grid-cols-[100px_1fr] gap-12 max-[640px]:grid-cols-1 max-[640px]:gap-4 py-10 border-b border-white/10 last:border-0 hover:border-gold/30 transition-colors">
-                  <div className="font-serif text-[48px] text-gold/20 leading-none group-hover:text-gold transition-colors">
+                  <div className="font-serif text-[48px] text-gold/50 leading-none group-hover:text-gold transition-colors">
                     {String(i + 1).padStart(2, '0')}
                   </div>
                   <div className="flex items-center">
@@ -113,7 +113,7 @@ export default function CommercialLeasePropertyPage() {
             <div className="grid grid-cols-3 gap-px bg-dark/5 border border-dark/5 max-[900px]:grid-cols-2 max-[640px]:grid-cols-1">
               {solutions.map((item, i) => (
                 <div key={i} className="bg-white p-10 hover:bg-gold/5 transition-colors flex items-center gap-6 group">
-                  <div className="font-serif text-[32px] text-gold/20 leading-none group-hover:text-gold transition-colors shrink-0">
+                  <div className="font-serif text-[32px] text-gold/50 leading-none group-hover:text-gold transition-colors shrink-0">
                     {String(i + 1).padStart(2, '0')}
                   </div>
                   <p className="font-serif text-[17px] text-dark group-hover:text-gold transition-colors leading-tight">{item}</p>

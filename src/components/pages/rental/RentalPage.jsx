@@ -122,7 +122,7 @@ export default function RentalPage() {
                 }
               ].map((item, i) => (
                 <div key={i} className="group border border-white/[.08] p-10 hover:border-gold/30 transition-all duration-300 hover:shadow-[0_16px_40px_rgba(192,154,94,.06)]">
-                  <div className="font-serif text-[48px] text-gold/20 leading-none mb-6 group-hover:text-gold/50 transition-colors">{item.num}</div>
+                  <div className="font-serif text-[48px] text-gold/50 leading-none mb-6 group-hover:text-gold transition-colors">{item.num}</div>
                   <h3 className="font-serif text-xl text-white leading-[1.3] mb-4 group-hover:text-gold transition-colors">{item.title}</h3>
                   <p className="text-[15px] text-white/50 font-light leading-[1.8]">{item.desc}</p>
                 </div>

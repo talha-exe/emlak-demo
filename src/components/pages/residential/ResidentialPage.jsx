@@ -77,7 +77,7 @@ export default function ResidentialPage() {
               }
             ].map((type, i) => (
               <div key={i} className="bg-white/[.03] p-10 backdrop-blur-sm transition-all duration-400 hover:bg-gold/[.08] hover:-translate-y-1 group border-r border-b border-white/[.1] first:border-l">
-                <div className="font-serif text-[60px] font-light text-white/[.04] leading-none mb-6">0{i+1}</div>
+                <div className="font-serif text-[60px] font-light text-white/20 leading-none mb-6">0{i+1}</div>
                 <h3 className="font-serif text-xl font-normal text-white mb-5 group-hover:text-gold-light">{type.title}</h3>
                 <p className="text-[14px] text-white/[.35] font-light leading-[1.8]">{type.desc}</p>
               </div>

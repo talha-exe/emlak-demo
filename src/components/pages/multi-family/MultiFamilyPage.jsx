@@ -55,7 +55,7 @@ export default function MultiFamilyPage() {
             <div className="grid grid-cols-1 gap-0">
               {investmentStrategies.map((title, i) => (
                 <div key={i} className="group grid grid-cols-[100px_1fr] gap-12 max-[640px]:grid-cols-1 max-[640px]:gap-4 py-10 border-b border-white/10 last:border-0 hover:border-gold/30 transition-colors">
-                  <div className="font-serif text-[48px] text-gold/20 leading-none group-hover:text-gold transition-colors">
+                  <div className="font-serif text-[48px] text-gold/50 leading-none group-hover:text-gold transition-colors">
                     {String(i + 1).padStart(2, '0')}
                   </div>
                   <div className="flex items-center">

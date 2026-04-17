@@ -114,7 +114,7 @@ export default function CommercialBuySellPage() {
                 }
               ].map((item, i) => (
                 <div key={i} className="group grid grid-cols-[100px_1fr] gap-12 max-[640px]:grid-cols-1 max-[640px]:gap-6 pb-12 border-b border-white/10 last:border-0 hover:border-gold/30 transition-colors">
-                  <div className="font-serif text-[48px] text-gold/20 leading-none group-hover:text-gold transition-colors">{item.step}</div>
+                  <div className="font-serif text-[48px] text-gold/50 leading-none group-hover:text-gold transition-colors">{item.step}</div>
                   <div>
                     <h3 className="font-serif text-2xl font-light text-white mb-6 group-hover:text-gold-light transition-colors">{item.title}</h3>
                     <p className="text-[16px] text-white/50 font-light leading-[1.8] group-hover:text-white/70 transition-colors">{item.desc}</p>
