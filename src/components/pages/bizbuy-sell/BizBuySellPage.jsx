@@ -146,7 +146,7 @@ export default function BizBuySellPage() {
       {/* ── FINAL CTA ── */}
       <CTASection 
         eyebrow="Take Action"
-        title="Ready to Buy, Sell or Invest for Maximum Return?"
+        title="Ready to Buy, Sell, or Invest for Maximum Return?"
         subtitle=""
         buttonText="Let's Connect"
       />

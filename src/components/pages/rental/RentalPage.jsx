@@ -228,10 +228,10 @@ export default function RentalPage() {
       </RevealWrapper>
 
       {/* ── CTA ── */}
-      <CTASection 
+      <CTASection
         eyebrow="Get Started"
-        title="Ready to Rent Smarter?"
-        subtitle="Connect with our team today to start your hassle-free rental journey."
+        title="Don't let your property sit vacant. With the right strategy and support, we create balanced outcomes where both landlords and tenants win."
+        subtitle=""
         buttonText="Contact Us"
       />
     </main>

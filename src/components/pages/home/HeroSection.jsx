@@ -35,7 +35,7 @@ export default function HeroSection() {
           We invest in people, relationships &amp; value
         </p>
         <div className="flex flex-wrap gap-2.5 mb-14 animate-fadeUp-d4 max-[640px]:mb-10">
-          {['Luxury Residences', 'Commercial Assets', 'Development Opportunities', 'Strategic Investments'].map((pill) => (
+          {['Residential realestate', 'Commercial Assets', 'Development Opportunities', 'Strategic Investments'].map((pill) => (
             <span key={pill} className="inline-flex items-center gap-2.5 text-[9px] tracking-[.15em] uppercase text-white/60 font-light py-[10px] px-[20px] border border-gold/[.32] bg-gold/[.06] backdrop-blur-[12px] transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] hover:border-gold hover:text-gold-light hover:bg-gold/[.14] hover:-translate-y-0.5 max-[400px]:text-[8px] max-[400px]:px-4">
               <span className="w-[4px] h-[4px] rounded-full bg-gold shrink-0" />
               {pill}

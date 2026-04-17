@@ -23,12 +23,9 @@ export default function ListingAgentPage() {
         <div className="absolute inset-0 z-[1] bg-gradient-to-b from-dark/20 via-dark/60 via-50% to-dark" />
         <div className="hero-grid absolute inset-0 z-[2] pointer-events-none" />
         <div className="relative z-[3] max-w-[840px]">
-          <h1 className="font-serif text-[clamp(32px,5.5vw,76px)] font-light leading-[1.1] tracking-[-0.01em] text-white mb-6 animate-fadeUp-d2">
-            List <em className="italic text-gold">Smart.</em> Sell <em className="italic text-gold">Strong</em>
+          <h1 className="font-serif text-[clamp(28px,4.5vw,60px)] font-light leading-[1.2] tracking-[-0.01em] text-white mb-6 animate-fadeUp-d2 max-w-[900px]">
+            As An Expert Listing Agent, We Strategize Every Move To <em className="italic text-gold">List Smart, Sell Strong, And Win More!</em>
           </h1>
-          <p className="font-serif text-[clamp(15px,2vw,22px)] font-light italic text-white/[.55] mb-10 animate-fadeUp-d3 max-w-[640px]">
-            Precision Listing Agent Strategy for Maximum Return
-          </p>
           <div className="flex flex-wrap gap-4 animate-fadeUp-d4">
             <a href="https://emlakrealty.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 no-underline transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
               Schedule a Consultation
@@ -48,12 +45,8 @@ export default function ListingAgentPage() {
               <div>
                 <SectionHeader 
                   eyebrow="Intelligence" 
-                  title="Our Approach"
-                  subtitle="Positioning Before Promotion"
+                  title={<>Our Approach is Positioning It <em className="italic text-gold">Right Before Promotion</em></>} 
                 />
-                <p className="text-[17px] text-mid font-light leading-[1.8] mt-8">
-                  Before a property is launched, we conduct a comprehensive evaluation using data-backed market analysis and real-time buyer behavior insight.
-                </p>
               </div>
               <div className="bg-white p-12 shadow-[0_32px_64px_rgba(0,0,0,.04)] border-t-2 border-gold/30">
                 <div className="grid grid-cols-1 gap-y-6">
@@ -78,123 +71,7 @@ export default function ListingAgentPage() {
         </section>
       </RevealWrapper>
 
-      {/* ── NEGOTIATION CONTROL ── */}
-      <RevealWrapper>
-        <section className="bg-dark text-white py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7 overflow-hidden">
-          <div className="max-w-[1100px] mx-auto">
-            <div className="grid grid-cols-[1.2fr_1fr] gap-24 items-center max-[1100px]:grid-cols-1">
-              <div>
-                <SectionHeader 
-                  eyebrow="Strategy" 
-                  title="Negotiation Control from Offer to Closing" 
-                  light={true}
-                />
-                <p className="text-lg text-white/50 font-light leading-[1.8] mt-8 mb-12">
-                  Not all offers are created equal. While price is important, other factors can significantly affect your final net proceeds and timeline. We evaluate each offer in detail, considering:
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  {[
-                    { label: "Buyer's financial strength", val: '01' },
-                    { label: "Down payment structure", val: '02' },
-                    { label: "Contingencies", val: '03' },
-                    { label: "Appraisal exposure", val: '04' },
-                    { label: "Closing flexibility", val: '05' },
-                    { label: "Risk factors", val: '06' }
-                  ].map((factor, i) => (
-                    <div key={i} className="bg-white/[.03] p-8 border border-white/[.08] hover:bg-white/[.06] transition-colors">
-                      <span className="text-gold font-serif text-[10px] tracking-widest block mb-4">{factor.val}</span>
-                      <p className="text-white/70 font-medium text-sm">{factor.label}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="relative">
-                <div className="absolute -inset-10 bg-gold/5 blur-3xl rounded-full" />
-                <div className="relative p-12 bg-white/[0.03] border border-white/10 backdrop-blur-sm">
-                  <p className="text-[15px] text-white/60 font-light leading-[1.8] mb-10">
-                    For an expert real listing service, we collaborate with the best buyer&rsquo;s agent networks to attract qualified purchasers ready to make competitive offers.
-                  </p>
-                  <div className="pt-8 border-t border-white/10">
-                    <p className="text-[11px] tracking-[.25em] uppercase text-gold font-bold">Maximize Net Proceeds</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </RevealWrapper>
 
-      {/* ── WHO WE SERVE ── */}
-      <RevealWrapper>
-        <section className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7">
-          <div className="max-w-[1100px] mx-auto">
-            <div className="text-center mb-16">
-              <SectionHeader 
-                eyebrow="Representation" 
-                title="Who We Serve" 
-                subtitle="Listing Services Design For Every Seller"
-                className="flex flex-col items-center"
-              />
-            </div>
-            
-            <div className="grid grid-cols-5 gap-6 max-[1300px]:grid-cols-3 max-[900px]:grid-cols-2 max-[640px]:grid-cols-1 mb-20">
-              {[
-                { title: 'Primary Residence Sellers', desc: 'Homeowners seeking maximum return while transitioning to their next property.' },
-                { title: 'Relocating Sellers', desc: 'Owners facing timeline pressure who require structured coordination.' },
-                { title: 'Estate & Inherited Property Sellers', desc: 'Families need clarity, efficiency, and market precision.' },
-                { title: 'Investment Property Owners', desc: 'Landlords liquidating assets or repositioning capital.' },
-                { title: 'Multi-Family & Income Property Sellers', desc: 'Owners seeking strategic exit execution with investor-focused marketing.' }
-              ].map((client, i) => (
-                <div key={i} className="bg-white p-10 border-b-2 border-transparent hover:border-gold transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,.03)] h-full flex flex-col justify-between">
-                  <div>
-                    <h3 className="font-serif text-[18px] font-normal text-dark mb-4 leading-tight">{client.title}</h3>
-                    <p className="text-[13px] text-mid font-light leading-[1.7]">{client.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-            <div className="max-w-[900px] mx-auto text-center bg-dark p-16 shadow-[0_48px_96px_rgba(0,0,0,.12)] relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-gold/5 blur-[100px] group-hover:bg-gold/10 transition-colors" />
-              <p className="text-white/60 text-lg font-light leading-relaxed mb-10 relative z-10">
-                Position your property for success with Emlak Realty&rsquo;s high-performance listing strategy. From data-backed pricing and luxury-grade marketing to strategic buyer engagement, we orchestrate every step to create momentum, attract serious buyers, and achieve top-tier outcomes.
-              </p>
-              <a href="https://emlakrealty.com" className="inline-block py-[19px] px-12 bg-gold text-dark text-[11px] tracking-[.25em] uppercase font-bold relative z-10 hover:shadow-[0_8px_32px_rgba(192,154,94,.3)] transition-all">
-                Schedule a Consultation
-              </a>
-            </div>
-          </div>
-        </section>
-      </RevealWrapper>
-
-      {/* ── PROPERTIES WE LIST ── */}
-      <RevealWrapper>
-        <section className="bg-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7">
-          <div className="max-w-[1100px] mx-auto">
-            <div className="flex flex-col items-center text-center mb-16">
-              <div className="text-gold text-[10px] tracking-[.35em] uppercase font-bold mb-4">Portfolios</div>
-              <h2 className="font-serif text-[clamp(28px,4vw,52px)] text-white leading-[1.2]">Properties We <em className="italic text-gold">List</em></h2>
-            </div>
-            
-            <div className="grid grid-cols-3 gap-px bg-white/10 max-[900px]:grid-cols-1 border border-white/10 scale-[1.001]">
-              {[
-                { title: 'Single-Family Homes', desc: 'We highlight land value, upgrades, neighborhood positioning, and long-term appreciation potential.' },
-                { title: 'Condominiums', desc: 'We analyze building reserves, HOA strength, and competitive inventory to strengthen buyer confidence for luxury condos for sale.' },
-                { title: 'Co-ops', desc: 'We guide sellers through board requirements, financial disclosures, and buyer qualification screening.' },
-                { title: 'Townhouses', desc: 'We emphasize zoning flexibility, renovation potential, and asset-level appreciation factors.' },
-                { title: 'Multi-Family Properties', desc: 'We market income performance, rent roll stability, and long-term investment upside.' },
-                { title: 'New Construction', desc: 'We coordinate developer timelines, buyer outreach, and premium positioning strategies.' }
-              ].map((type, i) => (
-                <div key={i} className="bg-dark p-12 hover:bg-white/[0.03] transition-colors group">
-                  <h3 className="font-serif text-[20px] text-white mb-5 transition-colors group-hover:text-gold">{type.title}</h3>
-                  <p className="text-[14px] text-white/30 font-light leading-[1.8] group-hover:text-white/50 transition-colors">{type.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </RevealWrapper>
 
       {/* ── STRUCTURED SELLING PROCESS ── */}
       <RevealWrapper>
@@ -263,42 +140,9 @@ export default function ListingAgentPage() {
       </RevealWrapper>
 
       {/* ── LISTING ADVANTAGE ── */}
-      <RevealWrapper>
-        <section className="bg-cream py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7">
-          <div className="max-w-[1100px] mx-auto grid grid-cols-2 gap-24 items-center max-[900px]:grid-cols-1">
-            <div className="relative h-[500px] bg-dark group overflow-hidden">
-              <Image 
-                src="/images/listing-agent-hero.png" 
-                alt="Strategy focused" 
-                fill 
-                className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" 
-              />
-              <div className="absolute inset-0 bg-gold/10 mix-blend-overlay" />
-            </div>
-            <div>
-              <SectionHeader 
-                eyebrow="Advantage" 
-                title={<>The Emlak Realty&rsquo;s <em className="italic text-gold">Listing Advantage</em></>} 
-                subtitle="Strategy, Expertise, Results"
-              />
-              <div className="mt-12 space-y-10">
-                <div>
-                  <h3 className="text-xs tracking-[.2em] uppercase text-gold font-bold mb-4">Our Commitment</h3>
-                  <p className="font-serif text-[28px] italic text-dark leading-tight">
-                    &ldquo;We do not chase transactions. <br/><em className="italic text-gold">We protect value.</em>&rdquo;
-                  </p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </section>
-      </RevealWrapper>
-
-      {/* ── FINAL CTA ── */}
-      <CTASection 
-        eyebrow="Listing Services"
-        title='Because Selling Should Never <em className="italic text-gold">Feel Uncertain;</em> It Should <em className="italic text-gold">Feel Strategic.</em>'
+      <CTASection
+        eyebrow="Our Commitment"
+        title={<>We do not chase transactions. <br/><em className="italic">We protect value.</em></>}
         subtitle=""
         buttonText="Schedule a private consultation"
       />

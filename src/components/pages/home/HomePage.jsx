@@ -14,8 +14,9 @@ export default function HomePage() {
       <RevealWrapper>
         <section id="about" className="bg-cream text-dark py-[120px] px-[80px] grid grid-cols-2 gap-0 max-[1100px]:grid-cols-1 max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="pr-[88px] border-r border-gold/[.18] max-[1100px]:border-r-0 max-[1100px]:border-b max-[1100px]:border-gold/[.18] max-[1100px]:pr-0 max-[1100px]:pb-14">
-            <p className="eyebrow-line flex items-center gap-3.5 text-[11px] tracking-[.28em] uppercase text-gold font-medium mb-8">Real Estate With An Investor Mindset</p>
-            <h2 className="font-serif text-[clamp(38px,4.2vw,60px)] font-light text-dark leading-[1.05] mb-11">At Emlak Realty,<br />We Build <em className="italic text-gold">Lasting Value</em></h2>
+            <p className="eyebrow-line flex items-center gap-3.5 text-[11px] tracking-[.28em] uppercase text-gold font-medium mb-8">Strategy</p>
+            <h2 className="font-serif text-[clamp(38px,4.2vw,60px)] font-light text-dark leading-[1.05] mb-11">Real Estate With An <em className="italic text-gold">Investor Mindset</em></h2>
+            <p className="text-[clamp(18px,1.5vw,22px)] text-mid font-light leading-[1.5] mb-11">At Emlak Realty, We Add Value to Your Property for Maximum Performance</p>
             <div className="w-full h-[300px] relative overflow-hidden rounded-sm group">
               <Image src="/images/luxury-villa.png" alt="Modern luxury villa" fill className="object-cover transition-transform duration-600 ease-[cubic-bezier(.4,0,.2,1)] group-hover:scale-[1.04]" />
               <div className="absolute bottom-4 left-[18px] z-2 text-[9px] tracking-[.22em] uppercase text-gold/[.85] font-medium border-l-2 border-gold pl-2.5 bg-dark/50 py-2 px-3 backdrop-blur-lg">Strategic Real Estate</div>
@@ -24,7 +25,7 @@ export default function HomePage() {
           <div className="pl-[88px] max-[1100px]:pl-0 max-[1100px]:pt-14">
             <ul className="list-none">
               {['Top-rated brokerage delivering strategic real estate solutions',
-                'Specializing in luxury homes, commercial assets, and development opportunities',
+                'Specializing in residential real estate, commercial assets, and development opportunities',
                 'Investor-first approach focused on long-term wealth',
                 'Local expertise with global market reach',
                 'Simplifying complex real estate transactions'
@@ -51,17 +52,24 @@ export default function HomePage() {
           <p className="text-[10px] tracking-[.22em] uppercase text-white/20 mb-[22px]">Categories</p>
           <div className="grid grid-cols-3 gap-[2px] max-[1100px]:grid-cols-2 max-[640px]:grid-cols-1">
             {[
-              { num: '01', name: 'Fix & Flip', desc: 'Undervalued properties and maximize profit' },
-              { num: '02', name: 'BRRR Rental Properties', desc: 'Buy, rehab, rent, refinance, repeat strategy.' },
-              { num: '03', name: 'Development Site', desc: 'Prime land opportunities for residential or commercial development.' },
-              { num: '04', name: 'Commercial', desc: 'Income-generating properties designed for long-term business growth.' },
-              { num: '05', name: 'Multifamily', desc: 'Acquire multi-unit properties that generate consistent rental income streams.' },
-              { num: '06', name: 'Business Buy & Sell', desc: 'Buy or sell established businesses with strategic valuation and guidance.' },
+              { num: '01', name: 'Fix & Flip', items: ['Distressed single-family homes', 'Outdated condos or co-ops', 'Foreclosed residential properties', 'Small multifamily units (2–4 units)'] },
+              { num: '02', name: 'BRRR Rental Properties', items: ['Single-family rental homes', 'Duplexes and triplexes', 'Small apartment buildings'] },
+              { num: '03', name: 'Development Site', items: ['Vacant residential land parcels', 'Mixed-use development sites', 'Commercial zoning lots'] },
+              { num: '04', name: 'Commercial', items: ['Retail storefronts', 'Office buildings', 'Industrial warehouses', 'Mixed-use commercial properties'] },
+              { num: '05', name: 'Multifamily', items: ['Duplex and triplex properties', 'Mid-size apartment buildings (5–20 units)', 'Large apartment complexes'] },
+              { num: '06', name: 'Business Buy & Sell', items: ['Restaurants and cafes', 'Retail stores and franchises', 'Service-based businesses', 'Hospitality businesses'] },
             ].map((card) => (
               <div key={card.num} className="card-accent relative overflow-hidden bg-white/[.03] p-[52px_44px] border-t border-white/[.04] transition-all duration-400 ease-[cubic-bezier(.4,0,.2,1)] cursor-default hover:bg-gold/[.08] group">
                 <div className="font-serif text-[72px] font-light text-white/[.04] leading-none mb-[18px] transition-colors duration-400 group-hover:text-gold/[.14]">{card.num}</div>
-                <div className="font-serif text-[26px] font-normal text-white mb-3.5 transition-colors duration-400 group-hover:text-gold-light">{card.name}</div>
-                <p className="text-sm text-white/[.36] font-light leading-[1.72]">{card.desc}</p>
+                <div className="font-serif text-[26px] font-normal text-white mb-6 transition-colors duration-400 group-hover:text-gold-light">{card.name}</div>
+                <ul className="list-none flex flex-col gap-2.5">
+                  {card.items.map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-[13px] text-white/[.36] font-light leading-[1.5] transition-colors duration-400 group-hover:text-white/[.6]">
+                      <span className="w-1 h-1 rounded-full bg-gold/[.4] shrink-0 group-hover:bg-gold-light" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -90,10 +98,10 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-[2px] max-[640px]:grid-cols-1">
               {[
-                { num: '01', name: 'Residential', items: ['Luxury homes', 'Primary residences', 'Investment properties'] },
-                { num: '02', name: 'Development', items: ['Land acquisition', 'Site analysis', 'Developer advisory'] },
-                { num: '03', name: 'Commercial', items: ['Retail', 'Industrial', 'Mixed-use', 'Office'] },
-                { num: '04', name: 'Investment', items: ['Flip opportunities', 'BRRRR opportunities', 'Portfolio acquisitions'] },
+                { num: '01', name: 'Residential', items: ['Luxury homes', 'primary residences', 'investment properties'] },
+                { num: '02', name: 'Commercial', items: ['Retail', 'industrial', 'mixed-use', 'office'] },
+                { num: '03', name: 'Development', items: ['Land acquisition', 'site analysis', 'developer advisory'] },
+                { num: '04', name: 'Investment', items: ['Flip opportunities', 'BRRRR opportunities', 'portfolio acquisitions'] },
               ].map((svc) => (
                 <div key={svc.num} className="card-accent relative overflow-hidden bg-white p-[42px_36px] transition-all duration-400 ease-[cubic-bezier(.4,0,.2,1)] cursor-default hover:bg-dark hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,.15)] group">
                   <div className="font-serif text-[56px] font-light text-black/[.05] leading-none mb-3 transition-colors duration-400 group-hover:text-white/[.04]">{svc.num}</div>
@@ -144,10 +152,10 @@ export default function HomePage() {
           <div className="grid grid-cols-2 gap-[88px] mb-20 items-end max-[1100px]:grid-cols-1 max-[1100px]:gap-7">
             <SectionHeader 
               eyebrow="Advantage" 
-              title={<>Why Choose <em className="italic text-gold">Us</em></>} 
+              title={<>Why Choose <em className="italic text-gold">Us?</em></>} 
               light={true} 
             />
-            <p className="text-base text-white/[.38] font-light leading-[1.9]"><strong className="text-white/[.72] font-medium">Luxury real estate</strong> decisions are complex, but with the right <strong className="text-white/[.72] font-medium">brokerage</strong>, they don&apos;t have to be. We provide market intelligence, negotiation expertise, and client-focused strategies that give you an edge.</p>
+            <p className="text-base text-white/[.38] font-light leading-[1.9]">Emlak Realty is a strategy-driven real estate brokerage focused on delivering measurable results, not just closing deals. With a non-profit mindset, we focus on your long-term gains over quick commissions. We provide market intelligence, negotiation expertise, and client-focused strategies that give you an edge.</p>
           </div>
           <div className="grid grid-cols-2 grid-rows-[250px_250px] gap-[2px] mb-20 max-[1100px]:grid-rows-[180px_180px] max-[640px]:grid-cols-1 max-[640px]:grid-rows-[auto]">
             <div className="relative overflow-hidden row-span-2 group max-[640px]:row-span-1 max-[640px]:h-[200px]">
@@ -165,11 +173,11 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-5 gap-px max-[1100px]:grid-cols-2 max-[640px]:grid-cols-1">
             {[
-              { icon: <path d="M9 1.5L1 5.5v8c0 3.5 3 6.5 8 7.5 5-1 8-4 8-7.5v-8L9 1.5z" stroke="#C09A5E" strokeWidth="1.3"/>, title: 'Local Market Expertise', desc: 'Deep knowledge of neighborhoods, pricing trends, and demand cycles.' },
-              { icon: <><circle cx="9" cy="9" r="7.5" stroke="#C09A5E" strokeWidth="1.3"/><path d="M6 9l2 2 4-4" stroke="#C09A5E" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/></>, title: 'Strategic Negotiation', desc: 'We advocate aggressively and intelligently to protect your interests.' },
-              { icon: <path d="M3 5h12M3 9h12M3 13h8" stroke="#C09A5E" strokeWidth="1.3" strokeLinecap="round"/>, title: 'Transparent Communication', desc: 'Clear guidance at every stage of the transaction.' },
-              { icon: <><circle cx="9" cy="6" r="3" stroke="#C09A5E" strokeWidth="1.3"/><path d="M2 17c0-3.9 3.1-7 7-7s7 3.1 7 7" stroke="#C09A5E" strokeWidth="1.3" strokeLinecap="round"/></>, title: 'Personalized Service', desc: 'No cookie-cutter approach. Every strategy is goal-oriented.' },
-              { icon: <path d="M2 14l3-4 3 3 4-6 4 3" stroke="#C09A5E" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>, title: 'Seamless Process', desc: 'From consultation to closing, we handle the details so you can focus on your future.' },
+              { icon: <path d="M9 1.5L1 5.5v8c0 3.5 3 6.5 8 7.5 5-1 8-4 8-7.5v-8L9 1.5z" stroke="#C09A5E" strokeWidth="1.3"/>, title: 'Strategic Market Intelligence', desc: 'We leverage real-time data and advanced analytics to guide acquisition and disposition decisions.' },
+              { icon: <><circle cx="9" cy="9" r="7.5" stroke="#C09A5E" strokeWidth="1.3"/><path d="M6 9l2 2 4-4" stroke="#C09A5E" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/></>, title: 'Performance-Driven Negotiation', desc: 'We negotiate aggressively to secure favorable financial and contractual outcomes.' },
+              { icon: <path d="M3 5h12M3 9h12M3 13h8" stroke="#C09A5E" strokeWidth="1.3" strokeLinecap="round"/>, title: 'Investor-Focused Advisory', desc: 'Every recommendation is aligned with high ROI, portfolio growth, and long-term strategy.' },
+              { icon: <><circle cx="9" cy="6" r="3" stroke="#C09A5E" strokeWidth="1.3"/><path d="M2 17c0-3.9 3.1-7 7-7s7 3.1 7 7" stroke="#C09A5E" strokeWidth="1.3" strokeLinecap="round"/></>, title: 'Transparent Communication', desc: 'Clients receive clear, consistent updates throughout every phase of the transaction.' },
+              { icon: <path d="M2 14l3-4 3 3 4-6 4 3" stroke="#C09A5E" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>, title: 'Seamless Transaction Execution', desc: 'We coordinate due diligence, documentation, and closing to minimize friction and delays.' },
             ].map((card, i) => (
               <div key={i} className="bg-white/[.028] p-[42px_28px] border-t border-white/[.05] transition-all duration-400 ease-[cubic-bezier(.4,0,.2,1)] hover:bg-gold/[.08] hover:-translate-y-1 group">
                 <div className="w-10 h-10 border border-gold/[.32] flex items-center justify-center mb-6 transition-all duration-300 group-hover:border-gold group-hover:bg-gold/10">

@@ -163,7 +163,7 @@ export default function TenantScreeningPage() {
       <CTASection 
         eyebrow="Act Smarter"
         title="Don’t Risk Your Investment — Act Smarter with Emlak Realty"
-        subtitle="Our verification procedure helps minimize risk and safeguard your investment."
+        subtitle=""
         buttonText="Get Started"
       />
     </main>

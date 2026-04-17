@@ -50,18 +50,17 @@ export default function PropertyManagementPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { title: 'Maximize Income with Market-Driven Pricing', desc: 'Ensuring your assets generate competitive returns through strategic valuation.' },
-                { title: 'Rent Collection & Financial Reporting', desc: 'Streamlined collection processes with transparent, point-by-point financial tracking.' },
-                { title: 'Maintenance and Operational Oversight', desc: 'Proactive property care to preserve value and ensure smooth day-to-day operations.' },
-                { title: 'Lease and Legal Compliance', desc: 'Expert oversight to ensure all agreements meet current legal and regulatory standards.' },
-                { title: 'Transparent Financial Reporting', desc: 'Access detailed insights into your property\'s performance at any time.' }
-              ].map((item, i) => (
+                'Maximize Income with Market-Driven Pricing',
+                'Rent Collection & Financial Reporting',
+                'Maintenance and Operational Oversight',
+                'Lease and Legal Compliance',
+                'Transparent Financial Reporting',
+              ].map((title, i) => (
                 <div key={i} className="group bg-white p-10 border border-dark/[.06] hover:border-gold/30 transition-all hover:shadow-[0_16px_40px_rgba(0,0,0,.06)]">
                   <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mb-8 group-hover:bg-gold/20 transition-colors">
                     <svg width="20" height="20" viewBox="0 0 14 14" fill="none"><path d="M2 7l3.5 3.5L12 4" stroke="#C09A5E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                   </div>
-                  <h3 className="font-serif text-xl text-dark leading-[1.4] mb-4 group-hover:text-gold transition-colors">{item.title}</h3>
-                  <p className="text-[15px] text-mid font-light leading-[1.6]">{item.desc}</p>
+                  <h3 className="font-serif text-xl text-dark leading-[1.4] group-hover:text-gold transition-colors">{title}</h3>
                 </div>
               ))}
             </div>
@@ -112,20 +111,15 @@ export default function PropertyManagementPage() {
               </div>
             </div>
 
-            <div className="mt-20 p-12 border border-gold/20 bg-gold/5 text-center">
-              <p className="font-serif text-2xl text-white/80 italic">
-                "We manage your investment efficiently, keeping occupancy high, rents on track, and your property well-maintained."
-              </p>
-            </div>
           </div>
         </section>
       </RevealWrapper>
 
       {/* ── CTA ── */}
-      <CTASection 
+      <CTASection
         eyebrow="Asset Protection"
-        title="Protect Your Investment Today"
-        subtitle="Connect with our property management experts to secure your asset's future."
+        title="We manage your investment efficiently, keeping occupancy high, rents on track, and your property well-maintained."
+        subtitle=""
         buttonText="Contact Us"
       />
     </main>

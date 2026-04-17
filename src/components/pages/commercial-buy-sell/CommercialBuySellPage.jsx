@@ -26,7 +26,7 @@ export default function CommercialBuySellPage() {
             Commercial Buy <em className="italic text-gold">&amp; Sell</em>
           </h1>
           <p className="font-serif text-[clamp(15px,2vw,22px)] font-light italic text-white/[.55] mb-10 animate-fadeUp-d3 max-w-[740px]">
-            Buy with Strategy, Scale with Discipline.
+            Make Every Commercial Property Decision Count
           </p>
           <div className="flex flex-wrap gap-4 animate-fadeUp-d4">
             <a href="https://emlakrealty.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 no-underline transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
@@ -51,8 +51,8 @@ export default function CommercialBuySellPage() {
               <p className="text-[17px] text-mid font-light leading-[1.8]">
                 From retail and office property, mixed-use and industrial property, and so on, we lead investors, owner-operators, and developers through acquisitions and dispositions aimed at enhancing financial performance.
               </p>
-              <p className="font-serif text-[clamp(20px,2.4vw,30px)] font-light italic text-dark leading-[1.4] mt-4">
-                Make every commercial property decision count. Our specialists combine research, pricing analysis, and strategic negotiation to help you <em className="not-italic text-gold">buy the right property</em> and <em className="not-italic text-gold">sell with a high return.</em>
+              <p className="text-[17px] text-dark font-semibold leading-[1.8]">
+                Our specialists combine research, pricing analysis, and strategic negotiation to help you buy the right property and sell with a high return.
               </p>
             </div>
           </div>
@@ -155,54 +155,32 @@ export default function CommercialBuySellPage() {
               Disposing of a commercial asset requires strategy, timing, and precision. In <strong className="text-dark font-medium">Emlak Realty</strong>, we design each commercial sale in a way that conserves capital and generates maximum returns by being disciplined and focused in our valuation and execution.
             </p>
 
-            <div className="grid grid-cols-1 gap-10">
+            <div className="grid grid-cols-1 gap-0">
               {[
-                {
-                  title: 'Strategic Exit Planning',
-                  desc: 'Every disposition begins with a clear exit strategy. We assess the performance of assets, market demand, and timing factors in order to come up with the most favorable course of sale as well as to fall within your overall investment objectives.'
-                },
-                {
-                  title: 'Data-Driven Valuation & Positioning',
-                  desc: 'Accurate pricing is necessary. We compare income performance, similar sales, and market trends to develop a competitive market valuation that is appealing to qualified investors without compromising value.'
-                },
-                {
-                  title: 'Targeted Investor Marketing',
-                  desc: 'Commercial assets require focused exposure. We market your property using investor-friendly literature and direct phone calls to serious and financially qualified investors.'
-                },
-                {
-                  title: 'Negotiation & Capital Protection',
-                  desc: 'Negotiation defines the final outcome. We manage offers strategically to optimize pricing, strengthen terms, and safeguard your financial interests throughout the transaction.'
-                },
-                {
-                  title: 'Seamless Transaction Management',
-                  desc: 'We organize due diligence, documentation, and closing to make the process efficient and transparent so that you can proceed with confidence.'
-                }
-              ].map((item, i) => (
-                <div key={i} className="group flex gap-8 pb-10 border-b border-dark/[.08] last:border-0 hover:border-gold/30 transition-colors max-[640px]:flex-col max-[640px]:gap-4">
-                  <div className="w-12 h-12 border border-gold/20 flex items-center justify-center text-gold font-serif text-xl shrink-0 group-hover:bg-gold/10 transition-colors">{String(i+1).padStart(2, '0')}</div>
-                  <div>
-                    <h3 className="font-serif text-xl text-dark mb-4 group-hover:text-gold transition-colors">{item.title}</h3>
-                    <p className="text-[15px] text-mid font-light leading-[1.8]">{item.desc}</p>
+                'Strategic Exit Planning',
+                'Data-Driven Valuation & Positioning',
+                'Targeted Investor Marketing',
+                'Negotiation & Capital Protection',
+                'Seamless Transaction Management',
+              ].map((title, i) => (
+                <div key={i} className="group flex gap-8 py-8 border-b border-dark/[.08] last:border-0 hover:border-gold/30 transition-colors max-[640px]:flex-col max-[640px]:gap-4">
+                  <div className="w-12 h-12 border border-gold/20 flex items-center justify-center text-gold font-serif text-xl shrink-0 group-hover:bg-gold/10 transition-colors">{String(i + 1).padStart(2, '0')}</div>
+                  <div className="flex items-center">
+                    <h3 className="font-serif text-xl text-dark group-hover:text-gold transition-colors">{title}</h3>
                   </div>
                 </div>
               ))}
-            </div>
-
-            <div className="mt-8 border-t border-gold/20 pt-6">
-              <p className="text-[15px] text-mid font-light leading-[1.8]">
-                Leverage our expertise to identify prime opportunities, negotiate stronger deals, and unlock the full potential of your investment. Our brokerage services are structured around a fair agent commission designed to deliver strong results.
-              </p>
             </div>
           </div>
         </section>
       </RevealWrapper>
 
       {/* ── FINAL CTA ── */}
-      <CTASection 
+      <CTASection
         eyebrow="Ready to Sell or Invest for Maximum Return?"
-        title="Buy Smart. Sell Strong with Emlak Realty"
-        subtitle="Schedule a consultation with our experts today."
-        buttonText="Schedule a Consultation"
+        title=""
+        subtitle=""
+        buttonText="Schedule a consultation"
       />
     </main>
   );
