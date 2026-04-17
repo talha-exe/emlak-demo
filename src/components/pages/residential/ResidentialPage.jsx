@@ -156,9 +156,9 @@ export default function ResidentialPage() {
                 { title: 'Qualified Tenant Screening', desc: 'Financially reliable tenants, vetted thoroughly' },
                 { title: 'Reliable Rental Performance', desc: 'Data-driven pricing for consistent income' },
               ].map((svc, i) => (
-                <div key={i} className="card-accent bg-cream p-8 transition-all duration-300 hover:bg-dark group border border-gold/[.1]">
+                <div key={i} className="card-accent bg-white p-8 transition-all duration-300 hover:bg-gold/5 hover:border-gold/30 hover:shadow-[0_16px_40px_rgba(0,0,0,.06)] group border border-dark/[.06]">
                   <h3 className="font-serif text-lg font-normal mb-3 text-dark group-hover:text-gold transition-colors">{svc.title}</h3>
-                  <p className="text-[13px] text-mid font-light leading-[1.6] group-hover:text-white/40 mb-0 transition-colors">{svc.desc}</p>
+                  <p className="text-[13px] text-mid font-light leading-[1.6] mb-0">{svc.desc}</p>
                 </div>
               ))}
             </div>

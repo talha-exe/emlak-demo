@@ -45,10 +45,10 @@ export default function AboutPage() {
               { icon: '⬡', title: 'Strategic', desc: 'With market intelligence and experience, we develop strategies to make best use of value and long term potential in residential and commercial real estate.' },
               { icon: '◆', title: 'Diverse', desc: 'Through our expertise in various types of property and markets, residential property, and commercial real estate investments, we will advise clients on the off-market investment opportunities that support their objectives.' },
             ].map((val, i) => (
-              <div key={i} className="card-accent relative overflow-hidden bg-white p-12 transition-all duration-400 cursor-default hover:bg-dark hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,.12)] group max-[640px]:p-8">
+              <div key={i} className="card-accent relative overflow-hidden bg-white p-12 transition-all duration-300 cursor-default hover:bg-gold/5 hover:border-gold/30 hover:shadow-[0_16px_40px_rgba(0,0,0,.06)] border border-dark/[.06] group max-[640px]:p-8">
                 <div className="w-12 h-12 border border-gold/[.32] flex items-center justify-center mb-6 text-gold text-lg transition-all duration-300 group-hover:border-gold group-hover:bg-gold/10">{val.icon}</div>
-                <h3 className="font-serif text-[26px] font-normal text-dark mb-4 transition-colors duration-400 group-hover:text-gold-light">{val.title}</h3>
-                <p className="text-[15px] text-mid font-light leading-[1.75] transition-colors duration-400 group-hover:text-white/[.45]">{val.desc}</p>
+                <h3 className="font-serif text-[26px] font-normal text-dark mb-4 transition-colors duration-300 group-hover:text-gold">{val.title}</h3>
+                <p className="text-[15px] text-mid font-light leading-[1.75]">{val.desc}</p>
               </div>
             ))}
           </div>
