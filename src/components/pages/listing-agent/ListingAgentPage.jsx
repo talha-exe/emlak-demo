@@ -5,6 +5,7 @@ import Link from 'next/link';
 import RevealWrapper from '@/components/ui/RevealWrapper';
 import SectionHeader from '@/components/ui/SectionHeader';
 import CTASection from '@/components/ui/CTASection';
+import ModalButton from '@/components/ui/ModalButton';
 
 export default function ListingAgentPage() {
   return (
@@ -27,9 +28,9 @@ export default function ListingAgentPage() {
             As An Expert Listing Agent, We Strategize Every Move To <em className="italic text-gold">List Smart, Sell Strong, And Win More!</em>
           </h1>
           <div className="flex flex-wrap gap-4 animate-fadeUp-d4">
-            <a href="https://emlakrealty.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 no-underline transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
+            <ModalButton className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
               Schedule a Consultation
-            </a>
+            </ModalButton>
             <button onClick={() => document.getElementById('approach')?.scrollIntoView({ behavior: 'smooth' })} className="inline-flex items-center gap-4 bg-transparent text-white text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 no-underline transition-all duration-300 border border-white/20 hover:border-gold hover:text-gold hover:-translate-y-0.5 group">
               Our Listing Strategy
             </button>
@@ -44,7 +45,6 @@ export default function ListingAgentPage() {
             <div className="grid grid-cols-[1fr_1.5fr] gap-20 max-[1100px]:grid-cols-1 max-[1100px]:gap-12">
               <div>
                 <SectionHeader 
-                  eyebrow="Intelligence" 
                   title={<>Our Approach is Positioning It <em className="italic text-gold">Right Before Promotion</em></>} 
                 />
               </div>
@@ -81,7 +81,6 @@ export default function ListingAgentPage() {
               <div>
                 <div className="sticky top-[120px]">
                   <SectionHeader 
-                    eyebrow="The Framework" 
                     title={<>Our Structured Selling Process <em className="italic text-gold">From Start to Finish</em></>} 
                   />
                 </div>
@@ -141,7 +140,6 @@ export default function ListingAgentPage() {
 
       {/* ── LISTING ADVANTAGE ── */}
       <CTASection
-        eyebrow="Our Commitment"
         title={<>We do not chase transactions. <br/><em className="italic">We protect value.</em></>}
         subtitle=""
         buttonText="Schedule a private consultation"

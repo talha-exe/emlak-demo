@@ -5,6 +5,7 @@ import Link from 'next/link';
 import RevealWrapper from '@/components/ui/RevealWrapper';
 import SectionHeader from '@/components/ui/SectionHeader';
 import CTASection from '@/components/ui/CTASection';
+import ModalButton from '@/components/ui/ModalButton';
 
 export default function BuyerAgentPage() {
   return (
@@ -27,9 +28,9 @@ export default function BuyerAgentPage() {
             As an Expert <em className="italic text-gold">Buyer Agent</em>, We Find Properties That Match Your Needs and <em className="italic text-gold">Long-Term Goals</em>
           </h1>
           <div className="flex flex-wrap gap-4 animate-fadeUp-d4">
-            <a href="https://emlakrealty.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 no-underline transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
+            <ModalButton className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
               Schedule a Consultation
-            </a>
+            </ModalButton>
             <button onClick={() => document.getElementById('strategy')?.scrollIntoView({ behavior: 'smooth' })} className="inline-flex items-center gap-4 bg-transparent text-white text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 no-underline transition-all duration-300 border border-white/20 hover:border-gold hover:text-gold hover:-translate-y-0.5 group">
               Our Acquisition Strategy
             </button>
@@ -44,7 +45,6 @@ export default function BuyerAgentPage() {
             <div className="grid grid-cols-[1fr_1.5fr] gap-20 max-[1100px]:grid-cols-1 max-[1100px]:gap-12">
               <div>
                 <SectionHeader 
-                  eyebrow="The Brokerage" 
                   title={<>A Brokerage that Leads the Market with the <em className="italic text-gold">Right Property Value for You</em></>} 
                 />
                 <div className="mt-12 space-y-6">
@@ -88,7 +88,6 @@ export default function BuyerAgentPage() {
               <div className="grid grid-cols-[1.2fr_1fr] gap-24 items-center max-[1100px]:grid-cols-1">
                 <div>
                   <SectionHeader 
-                    eyebrow="Intelligence" 
                     title={<>Our Acquisition Strategy: <em className="italic text-gold">Data Before Emotion</em></>} 
                     light={true}
                   />
@@ -148,7 +147,6 @@ export default function BuyerAgentPage() {
         <section className="bg-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7">
           <div className="max-w-[1100px] mx-auto">
             <div className="flex flex-col items-center text-center mb-16">
-              <div className="text-gold text-[10px] tracking-[.35em] uppercase font-bold mb-4">Properties</div>
               <h2 className="font-serif text-[clamp(28px,4vw,52px)] text-white leading-[1.2]">Properties <em className="italic text-gold">We Represent</em></h2>
             </div>
             
@@ -178,7 +176,6 @@ export default function BuyerAgentPage() {
               <div>
                 <div className="sticky top-[120px]">
                   <SectionHeader 
-                    eyebrow="The Framework" 
                     title={<>A Structured Buying Process <em className="italic text-gold">From Start to Finish</em></>} 
                   />
                   <p className="text-[14px] tracking-[.1em] uppercase text-gold font-bold mt-8">Our Buying Framework</p>
@@ -322,7 +319,6 @@ export default function BuyerAgentPage() {
 
       {/* ── FINAL CTA ── */}
       <CTASection 
-        eyebrow="Private Consultation"
         title='Your Acquisition Deserves Nothing Less'
         buttonText="Get Started Today!"
       />

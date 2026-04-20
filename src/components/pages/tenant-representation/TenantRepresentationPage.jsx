@@ -4,6 +4,7 @@ import Image from 'next/image';
 import RevealWrapper from '@/components/ui/RevealWrapper';
 import SectionHeader from '@/components/ui/SectionHeader';
 import CTASection from '@/components/ui/CTASection';
+import ModalButton from '@/components/ui/ModalButton';
 
 const advisorySteps = [
   'Assessment of Business & Space',
@@ -86,9 +87,9 @@ export default function TenantRepresentationPage() {
             Secure the Right Space on the Right Terms
           </p>
           <div className="flex flex-wrap gap-4 animate-fadeUp-d4">
-            <a href="https://emlakrealty.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 no-underline transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
+            <ModalButton className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
               Schedule a Consultation
-            </a>
+            </ModalButton>
           </div>
         </div>
       </section>
@@ -98,7 +99,6 @@ export default function TenantRepresentationPage() {
         <section className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[1100px] mx-auto">
             <SectionHeader
-              eyebrow="Advocacy"
               title="Expert Tenant Representation with Strategy and Leverage"
             />
             <p className="text-[20px] text-mid font-light leading-[1.8] mt-10 max-w-[820px]">
@@ -120,10 +120,10 @@ export default function TenantRepresentationPage() {
               ))}
             </div>
             <div className="mt-12">
-              <a href="https://emlakrealty.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-transparent text-gold text-[11px] tracking-[.16em] uppercase font-semibold py-[16px] px-10 no-underline transition-all duration-300 border border-gold hover:bg-gold hover:text-dark hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
+              <ModalButton className="inline-flex items-center gap-4 bg-transparent text-gold text-[11px] tracking-[.16em] uppercase font-semibold py-[16px] px-10 transition-all duration-300 border border-gold hover:bg-gold hover:text-dark hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
                 Contact Our Expert
                 <svg width="16" height="16" viewBox="0 0 18 18" fill="none" className="transition-transform duration-300 group-hover:translate-x-1.5"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-              </a>
+              </ModalButton>
             </div>
           </div>
         </section>
@@ -134,7 +134,6 @@ export default function TenantRepresentationPage() {
         <section className="bg-dark text-white py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[1100px] mx-auto">
             <SectionHeader
-              eyebrow="Methodology"
               title="Our Strategic Tenant Advisory Framework"
               light={true}
               className="mb-20"
@@ -160,7 +159,6 @@ export default function TenantRepresentationPage() {
         <section className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[1100px] mx-auto">
             <SectionHeader
-              eyebrow="Asset Types"
               title="Commercial Spaces We Secure for Tenants"
               className="text-center flex flex-col items-center mb-16"
             />
@@ -184,9 +182,9 @@ export default function TenantRepresentationPage() {
                 We help businesses secure the space they need to succeed. With a focus on strategy and client advocacy, we ensure each leasing decision contributes to a stronger future for your business.
               </p>
               <div className="mt-10">
-                <a href="https://emlakrealty.com" target="_blank" rel="noopener noreferrer" className="inline-block py-[19px] px-12 bg-dark text-white text-[11px] tracking-[.25em] uppercase font-bold hover:bg-gold transition-colors">
+                <ModalButton className="inline-block py-[19px] px-12 bg-dark text-white text-[11px] tracking-[.25em] uppercase font-bold hover:bg-gold transition-colors">
                   Let&apos;s Get Started
-                </a>
+                </ModalButton>
               </div>
             </div>
           </div>
@@ -195,7 +193,6 @@ export default function TenantRepresentationPage() {
 
       {/* ── FINAL CTA ── */}
       <CTASection
-        eyebrow="Strategy Consultation"
         title="Are you planning a relocation, expansion, renewal, or new office lease? Now is the time to position your business for long-term success."
         subtitle=""
         buttonText="Start Your Tenant Strategy Consultation Today"

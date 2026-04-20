@@ -4,6 +4,7 @@ import Image from 'next/image';
 import RevealWrapper from '@/components/ui/RevealWrapper';
 import SectionHeader from '@/components/ui/SectionHeader';
 import CTASection from '@/components/ui/CTASection';
+import ModalButton from '@/components/ui/ModalButton';
 
 const frameworkSteps = [
   'Asset Evaluation & Market Positioning',
@@ -47,9 +48,9 @@ export default function CommercialLeasePropertyPage() {
             Commercial Strategy Lease That Stabilizes Your Income and Protects Your Asset Value
           </p>
           <div className="flex flex-wrap gap-4 animate-fadeUp-d4">
-            <a href="https://emlakrealty.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 no-underline transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
+            <ModalButton className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
               Request a Property Evaluation
-            </a>
+            </ModalButton>
           </div>
         </div>
       </section>
@@ -59,7 +60,6 @@ export default function CommercialLeasePropertyPage() {
         <section className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[1100px] mx-auto">
             <SectionHeader
-              eyebrow="Strategy"
               title="Leasing Is an Asset Strategy—Not Just Occupancy"
             />
             <p className="text-[17px] text-mid font-light leading-[1.8] mt-10 max-w-[820px]">
@@ -77,7 +77,6 @@ export default function CommercialLeasePropertyPage() {
         <section className="bg-dark text-white py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[1100px] mx-auto">
             <SectionHeader
-              eyebrow="Methodology"
               title="Our Strategic Leasing Framework"
               light={true}
               className="mb-20"
@@ -106,7 +105,6 @@ export default function CommercialLeasePropertyPage() {
         <section className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[1100px] mx-auto">
             <SectionHeader
-              eyebrow="Solutions"
               title="Performance-Driven Commercial Leasing Solutions"
               className="mb-16"
             />
@@ -126,7 +124,6 @@ export default function CommercialLeasePropertyPage() {
 
       {/* ── FINAL CTA ── */}
       <CTASection
-        eyebrow="Consultation"
         title="Ready to Strengthen Your Commercial Asset?"
         subtitle=""
         buttonText="Schedule your consultation now"

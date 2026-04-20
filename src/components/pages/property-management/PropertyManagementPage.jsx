@@ -4,6 +4,7 @@ import Image from 'next/image';
 import RevealWrapper from '@/components/ui/RevealWrapper';
 import SectionHeader from '@/components/ui/SectionHeader';
 import CTASection from '@/components/ui/CTASection';
+import ModalButton from '@/components/ui/ModalButton';
 
 export default function PropertyManagementPage() {
   return (
@@ -29,10 +30,10 @@ export default function PropertyManagementPage() {
             From Tenant Placement to Maintenance. We Handle It All.
           </p>
           <div className="animate-fadeUp-d4">
-            <a href="https://emlakrealty.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 no-underline transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
+            <ModalButton className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
               Schedule Your Private Consultation
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="transition-transform duration-300 group-hover:translate-x-1.5"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </a>
+            </ModalButton>
           </div>
         </div>
       </section>
@@ -117,7 +118,6 @@ export default function PropertyManagementPage() {
 
       {/* ── CTA ── */}
       <CTASection
-        eyebrow="Asset Protection"
         title="We manage your investment efficiently, keeping occupancy high, rents on track, and your property well-maintained."
         subtitle=""
         buttonText="Contact Us"

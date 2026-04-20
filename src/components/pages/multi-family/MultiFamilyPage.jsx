@@ -44,7 +44,6 @@ export default function MultiFamilyPage() {
         <section className="bg-dark text-white py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[1100px] mx-auto">
             <SectionHeader
-              eyebrow="Investment Strategy"
               title="Why Multi Family Assets Remain a Core Investment Strategy"
               light={true}
               className="mb-10"
@@ -73,7 +72,6 @@ export default function MultiFamilyPage() {
         <section className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[1100px] mx-auto text-center">
             <SectionHeader
-              eyebrow="Portfolio Growth"
               title="Build a Stronger Investment Portfolio with Multifamily Real Estate"
               className="flex flex-col items-center"
             />
@@ -83,7 +81,6 @@ export default function MultiFamilyPage() {
 
       {/* ── FINAL CTA ── */}
       <CTASection
-        eyebrow="Get Started"
         title="Ready to Strengthen Your Multi Family Portfolio with Emlak Realty?"
         subtitle=""
         buttonText="Let's Connect"

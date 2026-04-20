@@ -44,7 +44,6 @@ export default function TenantScreeningPage() {
           <div className="max-w-[1100px] mx-auto grid grid-cols-[1.2fr_1fr] gap-24 items-start max-[1100px]:grid-cols-1 max-[1100px]:gap-12">
             <div>
               <SectionHeader 
-                eyebrow="Due Diligence" 
                 title="Fast, Accurate & Legally Compliant: Thorough Screening Without Delays" 
               />
               <div className="mt-10 space-y-6">
@@ -84,7 +83,6 @@ export default function TenantScreeningPage() {
           <div className="max-w-[1100px] mx-auto">
             <div className="text-center mb-20">
               <SectionHeader 
-                eyebrow="Verification" 
                 title="Our Proven 5-Step Tenant Verification Process" 
                 subtitle="A Structured, Reliable Approach to Securing the Right Tenants"
                 light={true}
@@ -102,9 +100,9 @@ export default function TenantScreeningPage() {
                 { title: 'Credit & Financial Assessment', step: '03' },
                 { title: 'Risk Evaluation & Approval Recommendation', step: '04' }
               ].map((item, i) => (
-                <div key={i} className="relative p-10 bg-white/[.02] border border-white/[.05] hover:border-gold/30 transition-all group overflow-hidden">
-                  <div className="font-serif text-[64px] text-white/[.03] absolute -top-4 -right-4 group-hover:text-gold/5 transition-colors">{item.step}</div>
-                  <h3 className="font-serif text-xl font-light text-white mb-4 relative z-10 group-hover:text-gold transition-colors">{item.title}</h3>
+                <div key={i} className="relative p-12 min-h-[220px] flex flex-col justify-end bg-white/[.02] border border-white/[.05] hover:border-gold/30 transition-all group overflow-hidden">
+                  <div className="font-serif text-[80px] text-white/20 absolute -top-2 -right-2 group-hover:text-gold/50 transition-colors leading-none">{item.step}</div>
+                  <h3 className="font-serif text-xl font-light text-white relative z-10 group-hover:text-gold transition-colors">{item.title}</h3>
                 </div>
               ))}
             </div>
@@ -127,7 +125,6 @@ export default function TenantScreeningPage() {
         <section className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[1100px] mx-auto text-center mb-16">
             <SectionHeader 
-              eyebrow="Expertise" 
               title="Why Landlords Trust Our Screening Services" 
               className="flex flex-col items-center"
             />
@@ -161,7 +158,6 @@ export default function TenantScreeningPage() {
 
       {/* ── FINAL CTA ── */}
       <CTASection 
-        eyebrow="Act Smarter"
         title="Don’t Risk Your Investment — Act Smarter with Emlak Realty"
         subtitle=""
         buttonText="Get Started"

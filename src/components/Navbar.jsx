@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -142,7 +141,12 @@ export default function Navbar() {
             pathname === '/land-development' ? 'text-gold' : 'text-white/[.48] hover:text-gold'
           }`}>Land Development</Link>
         </li>
-        <li 
+        <li>
+          <Link href="/investment-portal" className={`nav-link-underline relative text-[11px] tracking-[.08em] uppercase font-normal no-underline transition-colors duration-250 whitespace-nowrap ${
+            pathname === '/investment-portal' ? 'text-gold' : 'text-white/[.48] hover:text-gold'
+          }`}>Investment Portal</Link>
+        </li>
+        <li
           className="relative group flex items-center"
           onMouseEnter={() => setRentalOpen(true)}
           onMouseLeave={() => setRentalOpen(false)}
@@ -178,9 +182,12 @@ export default function Navbar() {
         </li>
       </ul>
 
-      <Link href="/about" className="nav-cta text-[11px] tracking-[.08em] uppercase font-medium py-2.5 px-6 border border-gold text-gold bg-transparent no-underline transition-all duration-300 hover:bg-gold hover:text-dark focus-visible:outline-2 focus-visible:outline-gold-light focus-visible:outline-offset-[3px] max-[1100px]:hidden whitespace-nowrap">
+      <button
+        onClick={() => window.dispatchEvent(new CustomEvent('open-contact-modal'))}
+        className="nav-cta text-[11px] tracking-[.08em] uppercase font-medium py-2.5 px-6 border border-gold text-gold bg-transparent transition-all duration-300 hover:bg-gold hover:text-dark focus-visible:outline-2 focus-visible:outline-gold-light focus-visible:outline-offset-[3px] max-[1100px]:hidden whitespace-nowrap"
+      >
         Get Started
-      </Link>
+      </button>
 
       {/* Mobile menu button */}
       <button
@@ -283,9 +290,10 @@ export default function Navbar() {
             <Link href="/multi-family" onClick={() => setMenuOpen(false)} className="w-full py-5 border-b border-dark/[.03] text-[11px] tracking-[.15em] uppercase font-bold text-dark/90 no-underline hover:text-gold transition-colors">Multi Family</Link>
             <Link href="/bizbuy-sell" onClick={() => setMenuOpen(false)} className="w-full py-5 border-b border-dark/[.03] text-[11px] tracking-[.15em] uppercase font-bold text-dark/90 no-underline hover:text-gold transition-colors">BizBuy Sell</Link>
             <Link href="/land-development" onClick={() => setMenuOpen(false)} className="w-full py-5 border-b border-dark/[.03] text-[11px] tracking-[.15em] uppercase font-bold text-dark/90 no-underline hover:text-gold transition-colors">Land Development</Link>
-            
+            <Link href="/investment-portal" onClick={() => setMenuOpen(false)} className="w-full py-5 border-b border-dark/[.03] text-[11px] tracking-[.15em] uppercase font-bold text-dark/90 no-underline hover:text-gold transition-colors">Investment Portal</Link>
+
             <div className="w-full border-b border-dark/[.03]">
-              <button 
+              <button
                 onClick={() => setMobileRentalOpen(!mobileRentalOpen)}
                 className="w-full py-5 flex items-center justify-between bg-transparent border-none cursor-pointer p-0 text-[11px] tracking-[.15em] uppercase font-bold text-dark/90 group"
               >
@@ -302,7 +310,12 @@ export default function Navbar() {
             </div>
 
             <div className="w-full mt-10">
-              <Link href="/about" onClick={() => setMenuOpen(false)} className="block text-[10px] tracking-[.3em] uppercase font-bold py-4 px-10 border border-dark text-dark no-underline transition-all hover:bg-dark hover:text-white w-full text-center">Get Started</Link>
+              <button
+                onClick={() => { setMenuOpen(false); window.dispatchEvent(new CustomEvent('open-contact-modal')); }}
+                className="block text-[10px] tracking-[.3em] uppercase font-bold py-4 px-10 border border-dark text-dark transition-all hover:bg-dark hover:text-white w-full text-center"
+              >
+                Get Started
+              </button>
             </div>
           </div>
         </div>

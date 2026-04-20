@@ -1,6 +1,7 @@
 import { IBM_Plex_Serif, Outfit, JetBrains_Mono } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ModalRoot from '@/components/ui/ModalRoot';
 import './globals.css';
 
 const serif = IBM_Plex_Serif({
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <ModalRoot />
       </body>
     </html>
   );

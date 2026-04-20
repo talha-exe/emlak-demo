@@ -3,6 +3,7 @@ import Link from 'next/link';
 import RevealWrapper from '@/components/ui/RevealWrapper';
 import SectionHeader from '@/components/ui/SectionHeader';
 import CTASection from '@/components/ui/CTASection';
+import TestimonialsCarousel from './TestimonialsCarousel';
 
 export default function AboutPage() {
   return (
@@ -33,9 +34,6 @@ export default function AboutPage() {
       <RevealWrapper>
         <section className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7">
           <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3.5 text-[11px] tracking-[.26em] uppercase text-gold font-medium mb-4">
-              <span className="w-[30px] h-px bg-gold" />Our Foundation<span className="w-[30px] h-px bg-gold" />
-            </div>
             <h2 className="font-serif text-[clamp(36px,4.5vw,60px)] font-light text-dark leading-[1.05]">Emlak Realty&apos;s <em className="italic text-gold">Core Values</em></h2>
           </div>
           <div className="grid grid-cols-2 gap-[2px] max-[640px]:grid-cols-1">
@@ -60,7 +58,6 @@ export default function AboutPage() {
         <section id="story" className="bg-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[820px] mx-auto">
             <SectionHeader 
-              eyebrow="Our Journey" 
               title={<>Our <em className="italic text-gold">Story</em></>} 
               light={true} 
               className="mb-12"
@@ -89,10 +86,7 @@ export default function AboutPage() {
         <section className="bg-dark-2 py-[100px] px-[80px] max-[1100px]:py-16 max-[1100px]:px-[28px]">
           <div className="max-w-[900px] mx-auto">
             <div className="text-center mb-12">
-              <div className="flex items-center justify-center gap-3.5 text-[11px] tracking-[.26em] uppercase text-gold font-medium mb-4">
-                <span className="w-[30px] h-px bg-gold" />Mission<span className="w-[30px] h-px bg-gold" />
-              </div>
-              <h2 className="font-serif text-[clamp(28px,3.5vw,48px)] font-light text-white leading-[1.05]">Mission <em className="italic text-gold">Statements</em></h2>
+              <h2 className="font-serif text-[clamp(28px,3.5vw,48px)] font-light text-white leading-[1.05]">Our <em className="italic text-gold">Mission</em></h2>
             </div>
             <div className="border-l-2 border-gold bg-white/[.03] backdrop-blur-sm p-10 max-[640px]:p-6">
                 <p className="font-serif text-[clamp(16px,1.8vw,22px)] font-light italic text-white/[.7] leading-[1.7]">We strive to transform real estate experiences through trust, transparency, and strategic insight, empowering clients to make confident decisions.</p>
@@ -106,7 +100,6 @@ export default function AboutPage() {
         <section className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7">
           <div className="max-w-[900px] mx-auto">
             <SectionHeader 
-              eyebrow="Principles" 
               title={<>Our <em className="italic text-gold">Values</em></>} 
               className="mb-14"
             />
@@ -131,7 +124,6 @@ export default function AboutPage() {
       <RevealWrapper>
         <div className="grid grid-cols-2 min-h-[480px] max-[1100px]:grid-cols-1">
           <div className="bg-dark flex flex-col justify-center py-[88px] px-[72px] max-[1100px]:py-14 max-[1100px]:px-7">
-            <div className="eyebrow-line flex items-center gap-3.5 text-[11px] tracking-[.26em] uppercase text-gold font-medium mb-4">How We Work</div>
             <h2 className="font-serif text-[clamp(32px,4vw,52px)] font-light text-white leading-[1.05] mb-8">Our <em className="italic text-gold">Approach</em></h2>
             <p className="text-base text-white/[.5] font-light leading-[1.9]">
               As a trusted and leading full-service real estate brokerage, we guide clients from property identification to execution with precision, transparency, and professionalism. Our real estate agents ensure clear communication and actionable insights at every stage, making complex transactions seamless.
@@ -147,9 +139,6 @@ export default function AboutPage() {
       <RevealWrapper>
         <section className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7">
           <div className="max-w-[820px] mx-auto text-center">
-            <div className="flex items-center justify-center gap-3.5 text-[11px] tracking-[.26em] uppercase text-gold font-medium mb-4">
-              <span className="w-[30px] h-px bg-gold" />Forward<span className="w-[30px] h-px bg-gold" />
-            </div>
             <h2 className="font-serif text-[clamp(32px,4vw,52px)] font-light text-dark leading-[1.05] mb-10">The Journey <em className="italic text-gold">Continues..</em></h2>
             <div className="w-[52px] h-px bg-gold mx-auto mb-10" />
             <p className="text-base text-mid font-light leading-[1.9] mb-6">
@@ -166,9 +155,6 @@ export default function AboutPage() {
       <RevealWrapper>
         <section className="bg-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[820px] mx-auto text-center">
-            <div className="flex items-center justify-center gap-3.5 text-[11px] tracking-[.26em] uppercase text-gold font-medium mb-4">
-              <span className="w-[30px] h-px bg-gold" />Our People<span className="w-[30px] h-px bg-gold" />
-            </div>
             <h2 className="font-serif text-[clamp(36px,4.5vw,60px)] font-light text-white leading-[1.05] mb-10">Meet the <em className="italic text-gold">Team</em></h2>
             <div className="w-[52px] h-px bg-gold mx-auto mb-10" />
             <p className="font-serif text-[clamp(16px,1.8vw,22px)] font-light italic text-white/[.4] leading-[1.6]">
@@ -182,35 +168,15 @@ export default function AboutPage() {
       <RevealWrapper>
         <section className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-7">
           <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3.5 text-[11px] tracking-[.26em] uppercase text-gold font-medium mb-4">
-              <span className="w-[30px] h-px bg-gold" />Results<span className="w-[30px] h-px bg-gold" />
-            </div>
             <h2 className="font-serif text-[clamp(36px,4.5vw,60px)] font-light text-dark leading-[1.05]">Our Success <em className="italic text-gold">Stories</em></h2>
           </div>
-          <div className="grid grid-cols-3 gap-6 max-w-[1100px] mx-auto max-[1100px]:grid-cols-1">
-            {[
-              { quote: 'Emlak Realty helped us sell our property 30% above asking price in just 18 days. Their market intelligence was unmatched.', name: 'Sarah M.', result: '30% above asking · 18 days', type: 'Residential Sale' },
-              { quote: 'Their strategic approach to our commercial portfolio restructuring generated a 22% increase in annual returns within the first year.', name: 'David K.', result: '22% ROI increase · Year 1', type: 'Commercial Investment' },
-              { quote: 'From land acquisition to project completion, Emlak Realty guided us seamlessly. Our development project was delivered on time and under budget.', name: 'Michael & Priya T.', result: 'Under budget · On time delivery', type: 'Development Project' },
-              { quote: 'As first-time investors, we were overwhelmed. Emlak Realty simplified the BRRRR process and helped us build a 4-property portfolio in 14 months.', name: 'James R.', result: '4 properties · 14 months', type: 'BRRRR Strategy' },
-              { quote: 'Their transparent communication made a complex multi-family acquisition feel effortless. We closed on a 12-unit building with confidence.', name: 'Amanda L.', result: '12-unit acquisition · Seamless close', type: 'Multifamily' },
-            ].map((story, i) => (
-              <div key={i} className={`bg-white p-10 relative overflow-hidden transition-all duration-400 hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,.08)] group ${i >= 3 ? 'max-[1100px]:block' : ''} max-[640px]:p-7`}>
-                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gold to-accent scale-x-0 origin-left transition-transform duration-400 group-hover:scale-x-100" />
-                <p className="text-[10px] tracking-[.18em] uppercase text-gold font-medium mb-6">{story.type}</p>
-                <p className="font-serif text-base italic text-mid leading-[1.75] mb-8">&ldquo;{story.quote}&rdquo;</p>
-                <div className="border-t border-gold/[.18] pt-5">
-                  <p className="text-sm font-medium text-dark mb-1">{story.name}</p>
-                  <p className="text-xs text-gold font-medium tracking-[.08em]">{story.result}</p>
-                </div>
-              </div>
-            ))}
+          <div className="max-w-[1100px] mx-auto">
+            <TestimonialsCarousel />
           </div>
         </section>
       </RevealWrapper>
 
       <CTASection 
-        eyebrow="Take Action"
         title='Ready to maximize your real estate <em className="italic text-gold">potential?</em>'
         subtitle="Connect with our experts today and take the first step toward smarter, more profitable decisions."
         buttonText="Contact Our Experts"

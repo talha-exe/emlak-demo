@@ -4,6 +4,7 @@ import Image from 'next/image';
 import RevealWrapper from '@/components/ui/RevealWrapper';
 import SectionHeader from '@/components/ui/SectionHeader';
 import CTASection from '@/components/ui/CTASection';
+import ModalButton from '@/components/ui/ModalButton';
 
 export default function RentalPage() {
   return (
@@ -32,10 +33,10 @@ export default function RentalPage() {
             Renting a property shouldn&apos;t be stressful. Whether you&apos;re a landlord seeking reliable tenants or a renter searching for the perfect space, Emlak Realty delivers seamless, secure, and profitable rental solutions.
           </p>
           <div className="flex flex-wrap gap-4 animate-fadeUp-d4">
-            <a href="https://emlakrealty.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 no-underline transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
+            <ModalButton className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
               Find a Rental
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="transition-transform duration-300 group-hover:translate-x-1.5"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </a>
+            </ModalButton>
           </div>
         </div>
       </section>
@@ -75,10 +76,10 @@ export default function RentalPage() {
               Discover the finest luxury rentals in the city and experience sophisticated urban living
             </p>
 
-            <a href="https://emlakrealty.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 no-underline transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
+            <ModalButton className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
               Get Your Rental Evaluation Today
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="transition-transform duration-300 group-hover:translate-x-1.5"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </a>
+            </ModalButton>
           </div>
         </section>
       </RevealWrapper>
@@ -229,7 +230,6 @@ export default function RentalPage() {
 
       {/* ── CTA ── */}
       <CTASection
-        eyebrow="Get Started"
         title="Don't let your property sit vacant. With the right strategy and support, we create balanced outcomes where both landlords and tenants win."
         subtitle=""
         buttonText="Contact Us"

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import RevealWrapper from '@/components/ui/RevealWrapper';
 import SectionHeader from '@/components/ui/SectionHeader';
 import CTASection from '@/components/ui/CTASection';
+import ModalButton from '@/components/ui/ModalButton';
 
 export default function CommercialBuySellPage() {
   return (
@@ -29,9 +30,9 @@ export default function CommercialBuySellPage() {
             Make Every Commercial Property Decision Count
           </p>
           <div className="flex flex-wrap gap-4 animate-fadeUp-d4">
-            <a href="https://emlakrealty.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 no-underline transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
+            <ModalButton className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
               Let&apos;s Get Started
-            </a>
+            </ModalButton>
           </div>
         </div>
       </section>
@@ -41,7 +42,6 @@ export default function CommercialBuySellPage() {
         <section className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[1100px] mx-auto">
             <SectionHeader 
-              eyebrow="Overview" 
               title="Execute Commercial Transactions with Accuracy and Leverage" 
             />
             <div className="mt-10 space-y-6">
@@ -64,7 +64,6 @@ export default function CommercialBuySellPage() {
         <section className="bg-dark text-white py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[1100px] mx-auto">
             <SectionHeader 
-              eyebrow="Acquisitions" 
               title="Our Commercial Property Acquisition Services" 
               light={true}
               className="mb-10"
@@ -147,7 +146,6 @@ export default function CommercialBuySellPage() {
         <section className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[1100px] mx-auto">
             <SectionHeader 
-              eyebrow="Dispositions" 
               title="Commercial Property Disposition" 
               className="mb-10"
             />
@@ -177,8 +175,7 @@ export default function CommercialBuySellPage() {
 
       {/* ── FINAL CTA ── */}
       <CTASection
-        eyebrow="Ready to Sell or Invest for Maximum Return?"
-        title=""
+        title="Ready to Sell or Invest for Maximum Return?"
         subtitle=""
         buttonText="Schedule a consultation"
       />

@@ -4,6 +4,7 @@ import RevealWrapper from '@/components/ui/RevealWrapper';
 import SectionHeader from '@/components/ui/SectionHeader';
 import CTASection from '@/components/ui/CTASection';
 import HeroSection from './HeroSection';
+import ModalButton from '@/components/ui/ModalButton';
 
 export default function HomePage() {
   return (
@@ -14,7 +15,6 @@ export default function HomePage() {
       <RevealWrapper>
         <section id="about" className="bg-cream text-dark py-[120px] px-[80px] grid grid-cols-2 gap-0 max-[1100px]:grid-cols-1 max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="pr-[88px] border-r border-gold/[.18] max-[1100px]:border-r-0 max-[1100px]:border-b max-[1100px]:border-gold/[.18] max-[1100px]:pr-0 max-[1100px]:pb-14">
-            <p className="eyebrow-line flex items-center gap-3.5 text-[11px] tracking-[.28em] uppercase text-gold font-medium mb-8">Strategy</p>
             <h2 className="font-serif text-[clamp(38px,4.2vw,60px)] font-light text-dark leading-[1.05] mb-11">Real Estate With An <em className="italic text-gold">Investor Mindset</em></h2>
             <p className="text-[clamp(18px,1.5vw,22px)] text-mid font-light leading-[1.5] mb-11">At Emlak Realty, We Add Value to Your Property for Maximum Performance</p>
             <div className="w-full h-[300px] relative overflow-hidden rounded-sm group">
@@ -44,7 +44,6 @@ export default function HomePage() {
         <section id="opps" className="bg-dark-2 py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="flex justify-between items-end mb-14 max-[1100px]:flex-col max-[1100px]:items-start max-[1100px]:gap-5">
             <SectionHeader 
-              eyebrow="Investment Portfolio" 
               title={<>Current Investment <em className="italic text-gold">Opportunities</em></>} 
               light={true} 
             />
@@ -93,7 +92,6 @@ export default function HomePage() {
         <section id="services" className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="grid grid-cols-[300px_1fr] gap-[72px] items-start max-[1100px]:grid-cols-1">
             <div>
-              <div className="eyebrow-line flex items-center gap-3.5 text-[11px] tracking-[.26em] uppercase text-gold font-medium mb-4">Expertise</div>
               <h2 className="font-serif text-[clamp(38px,4.8vw,64px)] font-light leading-[1.05] mb-[18px] text-dark">Advisory &amp;<br /><em className="italic text-gold">Brokerage</em><br />Services</h2>
             </div>
             <div className="grid grid-cols-2 gap-[2px] max-[640px]:grid-cols-1">
@@ -125,9 +123,7 @@ export default function HomePage() {
             <Image src="/images/luxury-interior.png" alt="Luxury living room interior" fill className="object-cover transition-transform duration-800 ease-[cubic-bezier(.4,0,.2,1)] group-hover:scale-105" />
           </div>
           <div className="bg-dark-3 flex flex-col justify-center py-[88px] px-[72px] border-l border-gold/[.18] max-[1100px]:py-14 max-[1100px]:px-7">
-            <p className="font-serif text-[clamp(20px,2.8vw,40px)] font-light italic text-white leading-[1.48] mb-6">Real estate done right. We bring insider knowledge, smart strategies, and results that speak for themselves.</p>
-            <div className="w-[52px] h-px bg-gold mb-6" />
-            <p className="font-serif text-[clamp(16px,2vw,30px)] font-light italic text-white/[.48] leading-[1.48]">Smart moves, better investments: <strong className="text-gold-light font-medium">Emlak Realty</strong> makes real estate simple.</p>
+            <p className="font-serif text-[clamp(20px,2.8vw,40px)] font-light italic text-white leading-[1.48]">Real estate done right. We bring insider knowledge, smart strategies, and results that speak for themselves.</p>
           </div>
         </div>
       </RevealWrapper>
@@ -139,10 +135,10 @@ export default function HomePage() {
             <h3 className="font-serif text-[clamp(32px,3.6vw,52px)] font-light text-dark mb-3 leading-[1.05]">Contact Our <em className="italic text-gold">Expert</em></h3>
             <p className="text-[15px] text-mid font-light">emlakrealty.com — We&apos;re ready when you are.</p>
           </div>
-          <a href="https://emlakrealty.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3.5 border border-dark text-dark text-xs tracking-[.14em] uppercase font-medium py-[18px] px-12 no-underline transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] whitespace-nowrap shrink-0 hover:bg-dark hover:text-white hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,.12)] group">
+          <ModalButton className="inline-flex items-center gap-3.5 border border-dark text-dark text-xs tracking-[.14em] uppercase font-medium py-[18px] px-12 transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] whitespace-nowrap shrink-0 hover:bg-dark hover:text-white hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,.12)] group">
             Contact Our Expert
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="transition-transform duration-300 group-hover:translate-x-[5px]"><path d="M2.5 8h11M8.5 3.5l5 4.5-5 4.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
-          </a>
+          </ModalButton>
         </div>
       </RevealWrapper>
 
@@ -151,7 +147,6 @@ export default function HomePage() {
         <section id="why" className="bg-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="grid grid-cols-2 gap-[88px] mb-20 items-end max-[1100px]:grid-cols-1 max-[1100px]:gap-7">
             <SectionHeader 
-              eyebrow="Advantage" 
               title={<>Why Choose <em className="italic text-gold">Us?</em></>} 
               light={true} 
             />
@@ -203,7 +198,6 @@ export default function HomePage() {
 
       <CTASection 
         id="success"
-        eyebrow="Begin Here"
         title='Start Your Success Story<br />with <em className="italic text-gold">Emlak Realty</em>'
         subtitle="Join a brokerage that prioritizes growth, rewards performance, and opens doors to high-value opportunities."
         buttonText="Join Emlak Realty"

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import RevealWrapper from '@/components/ui/RevealWrapper';
 import SectionHeader from '@/components/ui/SectionHeader';
 import CTASection from '@/components/ui/CTASection';
+import ModalButton from '@/components/ui/ModalButton';
 
 export default function LandDevelopmentPage() {
   return (
@@ -29,9 +30,9 @@ export default function LandDevelopmentPage() {
             Transforming Land into Lucrative Property Opportunities
           </p>
           <div className="flex flex-wrap gap-4 animate-fadeUp-d4">
-            <a href="https://emlakrealty.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 no-underline transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
+            <ModalButton className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
               Get Your Land Evaluated Today
-            </a>
+            </ModalButton>
           </div>
         </div>
       </section>
@@ -41,7 +42,6 @@ export default function LandDevelopmentPage() {
         <section className="bg-cream text-dark py-[120px] px-[80px] max-[1100px]:py-20 max-[1100px]:px-[28px]">
           <div className="max-w-[1100px] mx-auto">
             <SectionHeader 
-              eyebrow="Services" 
               title="Our Comprehensive Land Development Services" 
             />
             <p className="text-[17px] text-mid font-light leading-[1.8] mt-10 mb-16">
@@ -87,7 +87,6 @@ export default function LandDevelopmentPage() {
 
       {/* ── SLOGAN + CTA ── */}
       <CTASection 
-        eyebrow="Expert Advisory"
         title="Make Smart Land Decisions with Expert Advisory"
         subtitle=""
         buttonText="Get Started"
