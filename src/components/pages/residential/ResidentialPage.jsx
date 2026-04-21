@@ -11,7 +11,7 @@ const propertyTypes = [
   },
   {
     title: 'Single-Family Homes',
-    desc: 'Modern, high-end residences with premium features, requiring strategic evaluation of contracts, timelines, and upgrade costs.',
+    desc: 'Ideal for buyers seeking privacy, space, and long-term stability, providing full ownership of the land and structure with flexibility for customization.',
   },
   {
     title: 'Townhouses',
