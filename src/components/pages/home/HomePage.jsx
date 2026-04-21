@@ -80,10 +80,10 @@ export default function HomePage() {
         <div className="bg-gradient-to-br from-gold via-[#B8904F] to-gold-light py-14 px-[80px] flex items-center justify-between gap-[60px] relative overflow-hidden max-[1100px]:px-[28px] max-[1100px]:py-12 max-[1100px]:flex-col max-[1100px]:items-start">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,rgba(255,255,255,.12),transparent_60%)] pointer-events-none" />
           <p className="text-base text-dark/[.72] font-light leading-[1.85] max-w-[740px] relative z-[1]">Partner with us to access exclusive listings, expert guidance, and results-driven strategies. Leverage the <strong className="text-dark font-semibold italic">non-profit strategic nature of real estate</strong> to guide your decisions with integrity, insight, and strategic planning. Get started with our team today!</p>
-          <Link href="/about" className="relative z-[1] inline-flex items-center gap-3 bg-dark text-white text-[11px] tracking-[.14em] uppercase font-medium py-4 px-9 no-underline transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] whitespace-nowrap border border-dark shrink-0 hover:bg-transparent hover:text-dark hover:-translate-y-0.5">
+          <ModalButton className="relative z-[1] inline-flex items-center gap-3 bg-dark text-white text-[11px] tracking-[.14em] uppercase font-medium py-4 px-9 transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] whitespace-nowrap border border-dark shrink-0 hover:bg-transparent hover:text-dark hover:-translate-y-0.5">
             Get Started
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7.5 3.5l4 3.5-4 3.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/></svg>
-          </Link>
+          </ModalButton>
         </div>
       </RevealWrapper>
 

@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import StatCounter from '@/components/ui/StatCounter';
+import ModalButton from '@/components/ui/ModalButton';
 
 export default function HeroSection() {
   return (
@@ -42,10 +43,10 @@ export default function HeroSection() {
             </span>
           ))}
         </div>
-        <Link href="#opps" className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-[52px] no-underline transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] border border-gold animate-fadeUp-d5 hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group max-[640px]:w-full max-[640px]:justify-center">
+        <ModalButton className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-[52px] transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] border border-gold animate-fadeUp-d5 hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group max-[640px]:w-full max-[640px]:justify-center">
           Explore Opportunities
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="transition-transform duration-300 group-hover:translate-x-1.5"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-        </Link>
+        </ModalButton>
       </div>
 
       {/* Scroll indicator */}
