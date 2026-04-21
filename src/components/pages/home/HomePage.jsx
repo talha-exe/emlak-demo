@@ -133,7 +133,6 @@ export default function HomePage() {
         <div id="contact" className="bg-cream text-dark py-[88px] px-[80px] flex items-center justify-between gap-[60px] border-t border-gold/[.18] border-b border-b-gold/[.18] max-[1100px]:py-[72px] max-[1100px]:px-[28px] max-[1100px]:flex-col max-[1100px]:items-start">
           <div>
             <h3 className="font-serif text-[clamp(32px,3.6vw,52px)] font-light text-dark mb-3 leading-[1.05]">Contact Our <em className="italic text-gold">Expert</em></h3>
-            <p className="text-[15px] text-mid font-light">emlakrealty.com — We&apos;re ready when you are.</p>
           </div>
           <ModalButton className="inline-flex items-center gap-3.5 border border-dark text-dark text-xs tracking-[.14em] uppercase font-medium py-[18px] px-12 transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] whitespace-nowrap shrink-0 hover:bg-dark hover:text-white hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,.12)] group">
             Contact Our Expert
