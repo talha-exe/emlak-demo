@@ -179,7 +179,7 @@ export default function AboutPage() {
 
       <CTASection 
         title='Ready to maximize your real estate <em className="italic text-gold">potential?</em>'
-        subtitle="Connect with our experts today and take the first step toward smarter, more profitable decisions."
+        subtitle=""
         buttonText="Contact Our Experts"
       />
     </main>

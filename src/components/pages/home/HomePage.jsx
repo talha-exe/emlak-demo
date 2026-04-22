@@ -223,7 +223,7 @@ export default function HomePage() {
       <CTASection 
         id="success"
         title='Start Your Success Story<br />with <em className="italic text-gold">Emlak Realty</em>'
-        subtitle="Join a brokerage that prioritizes growth, rewards performance, and opens doors to high-value opportunities."
+        subtitle=""
         buttonText="Join Emlak Realty"
       />
     </main>
