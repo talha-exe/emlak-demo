@@ -16,12 +16,13 @@ export default function HeroSection() {
       {/* Stats sidebar */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 z-[3] animate-[fadeIn_1.2s_cubic-bezier(.4,0,.2,1)_both_1s] max-[1100px]:hidden">
         {[
-          { target: 10, suffix: '+', label: 'Years of Excellence' },
-          { target: 500, suffix: '+', label: 'Properties Closed' },
-          { target: 6, suffix: '', label: 'Investment Categories' },
+          { target: 1000, suffix: '+', label: 'Clients Served' },
+          { target: 100, suffix: '+', label: '5-Star Ratings' },
+          { target: 1, suffix: 'B+', label: 'Deal Exposure', prefix: '$' },
+          { target: 1000, suffix: '+', label: 'Off-Market Opportunities Sourced Annually' },
         ].map((stat, i) => (
           <div key={i} className={`py-6 px-8 text-right bg-dark/[.65] backdrop-blur-[16px] border-l border-gold/[.22] ${i > 0 ? 'border-t border-t-white/[.04]' : ''}`}>
-            <StatCounter target={stat.target} suffix={stat.suffix} className="font-serif text-[42px] font-light text-white leading-none" />
+            <StatCounter target={stat.target} suffix={stat.suffix} prefix={stat.prefix || ''} className="font-serif text-[42px] font-light text-white leading-none" />
             <div className="text-[10px] tracking-[.2em] uppercase text-white/30 mt-[5px]">{stat.label}</div>
           </div>
         ))}

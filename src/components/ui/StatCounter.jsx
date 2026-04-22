@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 
-export default function StatCounter({ target, suffix = '', className = '' }) {
+export default function StatCounter({ target, suffix = '', prefix = '', className = '' }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const hasAnimated = useRef(false);
@@ -36,6 +36,7 @@ export default function StatCounter({ target, suffix = '', className = '' }) {
 
   return (
     <div ref={ref} className={className}>
+      {prefix && <em className="text-gold not-italic">{prefix}</em>}
       <span>{count}</span>
       {suffix && <em className="text-gold not-italic">{suffix}</em>}
     </div>
