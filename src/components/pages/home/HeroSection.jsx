@@ -23,7 +23,7 @@ export default function HeroSection() {
         ].map((stat, i) => (
           <div key={i} className={`py-6 px-8 text-right bg-dark/[.65] backdrop-blur-[16px] border-l border-gold/[.22] ${i > 0 ? 'border-t border-t-white/[.04]' : ''}`}>
             <StatCounter target={stat.target} suffix={stat.suffix} prefix={stat.prefix || ''} className="font-serif text-[42px] font-light text-white leading-none" />
-            <div className="text-[10px] tracking-[.2em] uppercase text-white/30 mt-[5px]">{stat.label}</div>
+            <div className="text-[10px] tracking-[.2em] uppercase text-white/70 font-semibold mt-[5px]">{stat.label}</div>
           </div>
         ))}
       </div>
