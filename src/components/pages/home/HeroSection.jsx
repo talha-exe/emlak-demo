@@ -1,7 +1,6 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import StatCounter from '@/components/ui/StatCounter';
 import ModalButton from '@/components/ui/ModalButton';
 
 export default function HeroSection() {
@@ -13,20 +12,6 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-dark/[.15] via-dark/60 via-55% to-dark" />
       <div className="hero-grid absolute inset-0 z-[2] pointer-events-none" />
 
-      {/* Stats sidebar */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 z-[3] animate-[fadeIn_1.2s_cubic-bezier(.4,0,.2,1)_both_1s] max-[1100px]:hidden">
-        {[
-          { target: 1000, suffix: '+', label: 'Clients Served' },
-          { target: 100, suffix: '+', label: '5-Star Ratings' },
-          { target: 1, suffix: 'B+', label: 'Deal Exposure', prefix: '$' },
-          { target: 1000, suffix: '+', label: 'Off-Market Opportunities Sourced Annually' },
-        ].map((stat, i) => (
-          <div key={i} className={`py-6 px-8 text-right bg-dark/[.65] backdrop-blur-[16px] border-l border-gold/[.22] ${i > 0 ? 'border-t border-t-white/[.04]' : ''}`}>
-            <StatCounter target={stat.target} suffix={stat.suffix} prefix={stat.prefix || ''} className="font-serif text-[42px] font-light text-white leading-none" />
-            <div className="text-[10px] tracking-[.2em] uppercase text-white/70 font-semibold mt-[5px]">{stat.label}</div>
-          </div>
-        ))}
-      </div>
 
       <div className="relative z-[3] max-w-[960px]">
 

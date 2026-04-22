@@ -11,6 +11,39 @@ export default function HomePage() {
     <main>
       <HeroSection />
 
+      {/* ── STATS CARDS ── */}
+      <RevealWrapper>
+        <section className="bg-dark py-[80px] px-[80px] max-[1100px]:px-[28px] max-[1100px]:py-[60px]">
+          <div className="max-w-[1200px] mx-auto grid grid-cols-4 gap-5 max-[1100px]:grid-cols-2 max-[640px]:grid-cols-1">
+            {[
+              { prefix: '',  number: '1000+', label: 'Clients Served',                          icon: 'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75' },
+              { prefix: '',  number: '100+',  label: '5-Star Ratings',                          icon: 'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z' },
+              { prefix: '$', number: '1B+',   label: 'Deal Exposure',                           icon: 'M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6' },
+              { prefix: '',  number: '1000+', label: 'Off-Market Opportunities Sourced Annually', icon: 'M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0zM12 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2z' },
+            ].map((stat, i) => (
+              <div key={i} className="group relative bg-white/[.03] border border-white/[.08] hover:border-gold/40 transition-all duration-300 hover:bg-white/[.06] hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(0,0,0,.4)] p-10 flex flex-col items-center text-center max-[1100px]:p-8">
+                <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-gold/60 to-transparent absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* icon circle */}
+                <div className="w-[56px] h-[56px] rounded-full border border-gold/20 bg-gold/[.06] flex items-center justify-center mb-7 group-hover:bg-gold/[.12] group-hover:border-gold/40 transition-all duration-300">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C09A5E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d={stat.icon} />
+                  </svg>
+                </div>
+                {/* number */}
+                <div className="font-serif text-[clamp(36px,3.5vw,52px)] font-light text-white leading-none mb-3">
+                  {stat.prefix && <em className="not-italic text-gold">{stat.prefix}</em>}
+                  {stat.number}
+                </div>
+                {/* label */}
+                <div className="text-[11px] tracking-[.18em] uppercase text-white/50 font-medium leading-[1.6] group-hover:text-white/80 transition-colors duration-300">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </RevealWrapper>
+
       {/* ── INVESTOR MINDSET ── */}
       <RevealWrapper>
         <section id="about" className="bg-cream text-dark py-[120px] px-[80px] grid grid-cols-2 gap-0 max-[1100px]:grid-cols-1 max-[1100px]:py-20 max-[1100px]:px-[28px]">
