@@ -47,9 +47,9 @@ export default function ResidentialPage() {
         <div className="absolute inset-0 z-[1] bg-gradient-to-b from-dark/20 via-dark/60 via-50% to-dark" />
         <div className="hero-grid absolute inset-0 z-[2] pointer-events-none" />
         <div className="relative z-[3] max-w-[840px]">
-          <p className="font-serif text-[clamp(18px,2.6vw,30px)] font-normal text-white mb-10 animate-fadeUp-d3 max-w-[740px] leading-[1.3]">
+          <h2 className="font-serif text-[clamp(17px,2.2vw,32px)] font-light text-white mb-10 animate-fadeUp-d3 leading-[1.15]">
             Primary Residences, Investment Properties, and More — <em className="italic text-gold">All in One Place</em>
-          </p>
+          </h2>
           <ModalButton className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 transition-all duration-300 border border-gold animate-fadeUp-d4 hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
             Schedule a consultation
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="transition-transform duration-300 group-hover:translate-x-1.5"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>

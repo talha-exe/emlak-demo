@@ -23,12 +23,9 @@ export default function LandDevelopmentPage() {
         <div className="absolute inset-0 z-[1] bg-gradient-to-b from-dark/20 via-dark/60 via-50% to-dark" />
         <div className="hero-grid absolute inset-0 z-[2] pointer-events-none" />
         <div className="relative z-[3] max-w-[940px]">
-          <h1 className="font-serif text-[clamp(32px,5.5vw,76px)] font-light leading-[1.1] tracking-[-0.01em] text-white mb-6 animate-fadeUp-d2">
-            Land Development <em className="italic text-gold">Services</em>
-          </h1>
-          <p className="font-serif text-[clamp(15px,2vw,22px)] font-light italic text-white/[.55] mb-10 animate-fadeUp-d3 max-w-[740px]">
-            Transforming Land into Lucrative Property Opportunities
-          </p>
+          <h2 className="font-serif text-[clamp(20px,2.6vw,38px)] font-light text-white mb-10 animate-fadeUp-d3 leading-[1.15]">
+            Transforming Land into <em className="italic text-gold">Lucrative Property Opportunities</em>
+          </h2>
           <div className="flex flex-wrap gap-4 animate-fadeUp-d4">
             <ModalButton className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
               Get Your Land Evaluated Today

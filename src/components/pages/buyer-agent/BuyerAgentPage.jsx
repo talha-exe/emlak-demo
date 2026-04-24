@@ -24,9 +24,9 @@ export default function BuyerAgentPage() {
         <div className="absolute inset-0 z-[1] bg-gradient-to-b from-dark/20 via-dark/60 via-50% to-dark" />
         <div className="hero-grid absolute inset-0 z-[2] pointer-events-none" />
         <div className="relative z-[3] max-w-[840px]">
-          <h1 className="font-serif text-[clamp(32px,4vw,64px)] font-light leading-[1.2] tracking-[-0.01em] text-white mb-8 animate-fadeUp-d2">
+          <h2 className="font-serif text-[clamp(14px,1.8vw,26px)] font-light leading-[1.15] text-white mb-8 animate-fadeUp-d2">
             As an Expert <em className="italic text-gold">Buyer Agent</em>, We Find Properties That Match Your Needs and <em className="italic text-gold">Long-Term Goals</em>
-          </h1>
+          </h2>
           <div className="flex flex-wrap gap-4 animate-fadeUp-d4">
             <ModalButton className="inline-flex items-center gap-4 bg-gold text-dark text-xs tracking-[.16em] uppercase font-semibold py-[19px] px-12 transition-all duration-300 border border-gold hover:bg-transparent hover:text-gold hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(192,154,94,.2)] group">
               Schedule a Consultation

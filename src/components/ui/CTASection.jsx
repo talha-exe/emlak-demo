@@ -18,11 +18,13 @@ export default function CTASection({
         </div>
         <div className="absolute inset-0 z-[1] bg-dark/80" />
         <div className="relative z-[2] text-center p-[80px_24px] max-[1100px]:p-[60px_20px] max-w-[740px] mx-auto">
-          <h2 className="font-serif text-[clamp(20px,2.8vw,36px)] font-light leading-[1.3] mb-[22px] text-white">
-            {typeof title === 'string' ? (
-              <span dangerouslySetInnerHTML={{ __html: title }} />
-            ) : title}
-          </h2>
+          {title && (
+            <h2 className="font-serif text-[clamp(20px,2.8vw,36px)] font-light leading-[1.3] mb-[22px] text-white">
+              {typeof title === 'string' ? (
+                <span dangerouslySetInnerHTML={{ __html: title }} />
+              ) : title}
+            </h2>
+          )}
           <p className="text-base text-white/[.44] font-light leading-[1.85] max-w-[520px] mx-auto mb-13">
             {typeof subtitle === 'string' ? (
               <span dangerouslySetInnerHTML={{ __html: subtitle }} />

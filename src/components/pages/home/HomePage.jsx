@@ -4,6 +4,7 @@ import RevealWrapper from '@/components/ui/RevealWrapper';
 import SectionHeader from '@/components/ui/SectionHeader';
 import CTASection from '@/components/ui/CTASection';
 import HeroSection from './HeroSection';
+import FAQSection from './FAQSection';
 import ModalButton from '@/components/ui/ModalButton';
 
 export default function HomePage() {
@@ -220,7 +221,10 @@ export default function HomePage() {
         </div>
       </RevealWrapper>
 
-      <CTASection 
+      {/* ── FAQ ── */}
+      <FAQSection />
+
+      <CTASection
         id="success"
         title='Start Your Success Story<br />with <em className="italic text-gold">Emlak Realty</em>'
         subtitle=""

@@ -18,9 +18,9 @@ export default function AboutPage() {
         <div className="hero-grid absolute inset-0 z-[2] pointer-events-none" />
         <div className="relative z-[3] max-w-[820px]">
 
-          <h1 className="font-serif text-[clamp(32px,5.5vw,72px)] font-light leading-[1.1] tracking-[-0.01em] text-white mb-6 animate-fadeUp-d2">
+          <h2 className="font-serif text-[clamp(18px,2.4vw,36px)] font-light leading-[1.15] text-white mb-6 animate-fadeUp-d2">
             We Turn Real Estate Opportunities Into <em className="italic text-gold">Lasting Value</em> For Every Client
-          </h1>
+          </h2>
           <p className="font-serif text-[clamp(15px,2vw,22px)] font-light italic text-white/[.55] mb-10 animate-fadeUp-d3 max-w-[640px]">
             With market insight, strategic guidance, and a client-first approach, we make every move count.
           </p>

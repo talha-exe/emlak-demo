@@ -19,12 +19,9 @@ export default function InvestmentPortalPage() {
         <div className="absolute inset-0 z-[1] bg-gradient-to-b from-dark/20 via-dark/60 via-50% to-dark" />
         <div className="hero-grid absolute inset-0 z-[2] pointer-events-none" />
         <div className="relative z-[3] max-w-[840px]">
-          <h1 className="font-serif text-[clamp(32px,5.5vw,76px)] font-light leading-[1.1] tracking-[-0.01em] text-white mb-6 animate-fadeUp-d2">
-            Investment <em className="italic text-gold">Portal</em>
-          </h1>
-          <p className="font-serif text-[clamp(15px,2vw,22px)] font-light italic text-white/[.65] mb-10 animate-fadeUp-d3 max-w-[740px]">
-            Join Our Investor Network for Exclusive Investment Opportunities.
-          </p>
+          <h2 className="font-serif text-[clamp(18px,2.4vw,36px)] font-light text-white mb-10 animate-fadeUp-d3 leading-[1.15]">
+            Join Our Investor Network for <em className="italic text-gold">Exclusive Investment Opportunities</em>
+          </h2>
           <a
             href="https://investment.emlakrealty.com/"
             target="_blank"
