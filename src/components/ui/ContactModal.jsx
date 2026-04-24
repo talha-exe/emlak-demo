@@ -12,7 +12,7 @@ const REASONS = [
   { value: 'general',             label: 'General Inquiry' },
 ];
 
-const EMPTY = { firstName: '', lastName: '', contactNo: '', email: '', reason: '' };
+const EMPTY = { firstName: '', lastName: '', phone: '', email: '', inquiry: '' };
 
 export default function ContactModal({ isOpen, onClose }) {
   const [form, setForm]           = useState(EMPTY);
@@ -58,7 +58,10 @@ export default function ContactModal({ isOpen, onClose }) {
     try {
       await fetch('https://automation.emlakrealty.us/webhook/5cf47cc5-c228-41fc-8322-43da7e25136d', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Basic Y29udGFjdC1mb3JtLW44bjoxUW42Z3FTaTQyTXJKaA==',
+        },
         body: JSON.stringify(form),
       });
     } catch (err) {
@@ -117,8 +120,8 @@ export default function ContactModal({ isOpen, onClose }) {
             </div>
 
             <div className="space-y-4">
-              <Field label="Contact No" name="contactNo" type="tel"   value={form.contactNo} onChange={handleChange} placeholder="+1 (555) 000-0000" />
-              <Field label="Email"      name="email"     type="email" value={form.email}     onChange={handleChange} placeholder="john@example.com" />
+              <Field label="Contact No" name="phone" type="tel"   value={form.phone} onChange={handleChange} placeholder="+1 (555) 000-0000" />
+              <Field label="Email"      name="email" type="email" value={form.email} onChange={handleChange} placeholder="john@example.com" />
 
               {/* reason */}
               <div className="space-y-2">
@@ -127,8 +130,8 @@ export default function ContactModal({ isOpen, onClose }) {
                 </label>
                 <div className="relative">
                   <select
-                    name="reason"
-                    value={form.reason}
+                    name="inquiry"
+                    value={form.inquiry}
                     onChange={handleChange}
                     required
                     className="w-full appearance-none border border-white/[.1] text-white text-[14px] font-light px-4 py-3.5 focus:outline-none focus:border-gold/50 transition-colors duration-200 cursor-pointer pr-10"
