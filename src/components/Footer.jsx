@@ -44,16 +44,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="pt-4">
-              <h4 className="text-[11px] tracking-[.25em] uppercase text-white font-bold mb-4">Join Our Newsletter</h4>
-              <p className="text-[11px] text-white/40 tracking-[.08em] mb-8">Stay updated with the latest real estate news</p>
-              <Link href="/about" className="inline-flex items-center gap-3 bg-gold text-dark py-4 px-8 text-[11px] tracking-[.2em] uppercase font-bold no-underline hover:brightness-110 transition-all group">
-                Subscribe Now
-                <svg width="14" height="10" viewBox="0 0 14 10" fill="none" className="transition-transform group-hover:translate-x-1">
-                  <path d="M1 5H13M13 5L9 1M13 5L9 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
-            </div>
           </div>
 
           {/* Column 3: Social Feed */}

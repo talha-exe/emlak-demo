@@ -224,7 +224,7 @@ export default function RentalPage() {
 
       {/* ── CTA ── */}
       <CTASection
-        title="Don't let your property sit vacant. With the right strategy and support, we create balanced outcomes where both landlords and tenants win."
+        title="Get Smart Solutions For Real Property Management Rentals"
         subtitle=""
         buttonText="Contact Us"
       />

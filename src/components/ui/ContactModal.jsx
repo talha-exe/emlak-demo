@@ -53,7 +53,19 @@ export default function ContactModal({ isOpen, onClose }) {
   const handleChange = (e) =>
     setForm(f => ({ ...f, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true); };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await fetch('https://automation.emlakrealty.us/webhook/5cf47cc5-c228-41fc-8322-43da7e25136d', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+    } catch (err) {
+      console.error('Form submission error:', err);
+    }
+    setSubmitted(true);
+  };
 
   return (
     <div

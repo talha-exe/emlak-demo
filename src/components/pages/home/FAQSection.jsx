@@ -5,24 +5,44 @@ import SectionHeader from '@/components/ui/SectionHeader';
 
 const faqs = [
   {
-    q: 'What types of residential properties do you help clients buy or sell?',
-    a: 'We work with single-family houses, condos, townhouses, and luxurious houses. Our team assists in pairing each of our clients with a property that meets their lifestyle and budget.',
+    q: 'What services does Emlak Realty provide?',
+    a: 'Emlak Realty provides residential and commercial real estate services, property management, selling of business and land development support. We assist clients to make sure decisions during the entire real estate process are made confidently.',
   },
   {
-    q: 'How do you determine the right asking price for a home?',
-    a: 'We review local market trends and similar sales made in the recent past. This aids us in making your home competitive to have the highest number of buyers interested.',
+    q: 'Do you work with both buyers and sellers?',
+    a: 'Yes, we work with buyers and sellers of various types of property. Each client can obtain individual advice on how to obtain the best possible result, which is our work.',
   },
   {
-    q: 'Can first-time buyers benefit from your services?',
-    a: 'Yes, we take first-time buyers through the entire process. We simplify the buying of a house by clarifying financing, inspections, and negotiations.',
+    q: 'How can Emlak Realty help first-time clients?',
+    a: 'We make it easier by describing each of the steps. This helps first-time customers feel knowledgeable and at ease during the transaction.',
   },
   {
-    q: 'How long does it usually take to sell a residential property?',
-    a: 'The timeline depends on market conditions and pricing strategy. Well-prepared homes often attract stronger offers more quickly.',
+    q: 'What makes Emlak Realty different from other agencies?',
+    a: 'Our emphasis lies in customized service, market awareness and long-term customer relationships. We aim at providing solutions that suit individual needs of our clients.',
   },
   {
-    q: 'Do you help with property negotiations?',
-    a: 'Yes, we negotiate in order to safeguard your best interest. We aim to obtain good prices and conditions for your transaction.',
+    q: 'How does Emlak Realty help homebuyers find the right property?',
+    a: 'Emlak Realty works closely with buyers to understand their budget, lifestyle, and long-term goals before recommending properties that align with their needs. Detailed market insight and personalized support help simplify the search while ensuring buyers make confident decisions in competitive markets.',
+  },
+  {
+    q: 'Do you provide investment property guidance?',
+    a: 'Yes, we assist our clients to discover investment opportunities that suit their financial objectives. We also assess market potential so as to aid more intelligent decisions.',
+  },
+  {
+    q: 'Is multi-family real estate a good investment option?',
+    a: 'Multi-family properties can offer reliable rental income and stronger scalability compared to single-unit investments. When selected carefully, they may provide stable returns and long-term value in growing markets.',
+  },
+  {
+    q: 'Can Emlak Realty help buy or sell businesses?',
+    a: 'Yes, Emlak Realty helps clients buy and sell businesses by managing valuations, confidential marketing, buyer screening, and negotiations. The process is structured to protect the business while maximizing transaction value.',
+  },
+  {
+    q: 'Can Emlak Realty help identify profitable commercial opportunities?',
+    a: 'Yes, Emlak Realty analyzes location trends, tenant demand, and market performance to identify properties with strong income and appreciation potential. This helps investors make informed purchasing decisions with greater confidence.',
+  },
+  {
+    q: 'How do I get started with Emlak Realty?',
+    a: 'You can begin by contacting our team for a consultation. We talk about your objectives and can advise you on the optimal way to move in regards to your property requirements.',
   },
 ];
 
