@@ -20,7 +20,7 @@ function validate(form) {
   if (!form.firstName.trim())                          e.firstName = 'First name is required';
   if (!form.lastName.trim())                           e.lastName  = 'Last name is required';
   if (!form.phone.trim())                              e.phone     = 'Contact number is required';
-  else if (!/^\+?[0-9\s\-().]{7,20}$/.test(form.phone.trim())) e.phone = 'Enter a valid phone number';
+  else if (!/^\+1 \(\d{3}\) \d{3}-\d{4}$/.test(form.phone.trim())) e.phone = 'Enter a valid US number: +1 (555) 000-0000';
   if (!form.email.trim())                              e.email     = 'Email is required';
   else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) e.email = 'Enter a valid email address';
   if (!form.inquiry)                                   e.inquiry   = 'Please select a reason';
@@ -68,8 +68,20 @@ export default function ContactModal({ isOpen, onClose }) {
 
   const active = isOpen;
 
+  const formatPhone = (raw) => {
+    const digits = raw.replace(/\D/g, '').slice(0, 10); // max 10 digits after country code
+    if (digits.length === 0) return '';
+    if (digits.length <= 3)  return `+1 (${digits}`;
+    if (digits.length <= 6)  return `+1 (${digits.slice(0,3)}) ${digits.slice(3)}`;
+    return `+1 (${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`;
+  };
+
   const handleChange = (e) => {
-    const updated = { ...form, [e.target.name]: e.target.value };
+    let value = e.target.value;
+    if (e.target.name === 'phone') {
+      value = formatPhone(value);
+    }
+    const updated = { ...form, [e.target.name]: value };
     setForm(updated);
     if (touched[e.target.name]) {
       setErrors(validate(updated));
