@@ -12,11 +12,27 @@ const REASONS = [
   { value: 'general',             label: 'General Inquiry' },
 ];
 
-const EMPTY = { firstName: '', lastName: '', phone: '', email: '', inquiry: '' };
+const EMPTY  = { firstName: '', lastName: '', phone: '', email: '', inquiry: '' };
+const ERRORS = { firstName: '', lastName: '', phone: '', email: '', inquiry: '' };
+
+function validate(form) {
+  const e = { ...ERRORS };
+  if (!form.firstName.trim())                          e.firstName = 'First name is required';
+  if (!form.lastName.trim())                           e.lastName  = 'Last name is required';
+  if (!form.phone.trim())                              e.phone     = 'Contact number is required';
+  else if (!/^\+?[0-9\s\-().]{7,20}$/.test(form.phone.trim())) e.phone = 'Enter a valid phone number';
+  if (!form.email.trim())                              e.email     = 'Email is required';
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) e.email = 'Enter a valid email address';
+  if (!form.inquiry)                                   e.inquiry   = 'Please select a reason';
+  return e;
+}
 
 export default function ContactModal({ isOpen, onClose }) {
-  const [form, setForm]           = useState(EMPTY);
+  const [form, setForm]       = useState(EMPTY);
+  const [errors, setErrors]   = useState(ERRORS);
+  const [touched, setTouched] = useState(ERRORS);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading]     = useState(false);
   const [visible, setVisible]     = useState(false);
 
   /* drive enter / exit animation */
@@ -28,6 +44,8 @@ export default function ContactModal({ isOpen, onClose }) {
         setVisible(false);
         setSubmitted(false);
         setForm(EMPTY);
+        setErrors(ERRORS);
+        setTouched(ERRORS);
       }, 320);
       return () => clearTimeout(t);
     }
@@ -48,13 +66,31 @@ export default function ContactModal({ isOpen, onClose }) {
 
   if (!visible && !isOpen) return null;
 
-  const active = isOpen;   /* CSS classes driven by isOpen so transition plays */
+  const active = isOpen;
 
-  const handleChange = (e) =>
-    setForm(f => ({ ...f, [e.target.name]: e.target.value }));
+  const handleChange = (e) => {
+    const updated = { ...form, [e.target.name]: e.target.value };
+    setForm(updated);
+    if (touched[e.target.name]) {
+      setErrors(validate(updated));
+    }
+  };
+
+  const handleBlur = (e) => {
+    const t = { ...touched, [e.target.name]: true };
+    setTouched(t);
+    setErrors(validate(form));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const allTouched = Object.keys(ERRORS).reduce((a, k) => ({ ...a, [k]: true }), {});
+    setTouched(allTouched);
+    const errs = validate(form);
+    setErrors(errs);
+    if (Object.values(errs).some(Boolean)) return;
+
+    setLoading(true);
     try {
       await fetch('https://automation.emlakrealty.us/webhook/5cf47cc5-c228-41fc-8322-43da7e25136d', {
         method: 'POST',
@@ -67,6 +103,7 @@ export default function ContactModal({ isOpen, onClose }) {
     } catch (err) {
       console.error('Form submission error:', err);
     }
+    setLoading(false);
     setSubmitted(true);
   };
 
@@ -75,10 +112,7 @@ export default function ContactModal({ isOpen, onClose }) {
       className={`fixed inset-0 z-[600] flex items-center justify-center px-4 transition-opacity duration-300 ${active ? 'opacity-100' : 'opacity-0'}`}
     >
       {/* backdrop */}
-      <div
-        className="absolute inset-0 bg-dark/80 backdrop-blur-sm"
-        onClick={onClose}
-      />
+      <div className="absolute inset-0 bg-dark/80 backdrop-blur-sm" onClick={onClose} />
 
       {/* panel */}
       <div
@@ -112,16 +146,16 @@ export default function ContactModal({ isOpen, onClose }) {
         <div className="mx-10 h-px bg-white/[.06] max-[640px]:mx-6" />
 
         {!submitted ? (
-          <form onSubmit={handleSubmit} className="px-10 pt-7 pb-10 max-[640px]:px-6 max-[640px]:pb-8">
+          <form onSubmit={handleSubmit} noValidate className="px-10 pt-7 pb-10 max-[640px]:px-6 max-[640px]:pb-8">
             {/* name row */}
             <div className="grid grid-cols-2 gap-4 max-[480px]:grid-cols-1 mb-4">
-              <Field label="First Name" name="firstName" type="text" value={form.firstName} onChange={handleChange} placeholder="John" />
-              <Field label="Last Name"  name="lastName"  type="text" value={form.lastName}  onChange={handleChange} placeholder="Doe" />
+              <Field label="First Name" name="firstName" type="text"  value={form.firstName} onChange={handleChange} onBlur={handleBlur} placeholder="John"              error={touched.firstName && errors.firstName} />
+              <Field label="Last Name"  name="lastName"  type="text"  value={form.lastName}  onChange={handleChange} onBlur={handleBlur} placeholder="Doe"               error={touched.lastName  && errors.lastName}  />
             </div>
 
             <div className="space-y-4">
-              <Field label="Contact No" name="phone" type="tel"   value={form.phone} onChange={handleChange} placeholder="+1 (555) 000-0000" />
-              <Field label="Email"      name="email" type="email" value={form.email} onChange={handleChange} placeholder="john@example.com" />
+              <Field label="Contact No" name="phone" type="tel"   value={form.phone} onChange={handleChange} onBlur={handleBlur} placeholder="+1 (555) 000-0000" error={touched.phone && errors.phone} />
+              <Field label="Email"      name="email" type="email" value={form.email} onChange={handleChange} onBlur={handleBlur} placeholder="john@example.com"  error={touched.email && errors.email} />
 
               {/* reason */}
               <div className="space-y-2">
@@ -133,8 +167,8 @@ export default function ContactModal({ isOpen, onClose }) {
                     name="inquiry"
                     value={form.inquiry}
                     onChange={handleChange}
-                    required
-                    className="w-full appearance-none border border-white/[.1] text-white text-[14px] font-light px-4 py-3.5 focus:outline-none focus:border-gold/50 transition-colors duration-200 cursor-pointer pr-10"
+                    onBlur={handleBlur}
+                    className={`w-full appearance-none border text-white text-[14px] font-light px-4 py-3.5 focus:outline-none transition-colors duration-200 cursor-pointer pr-10 ${touched.inquiry && errors.inquiry ? 'border-red-500/70' : 'border-white/[.1] focus:border-gold/50'}`}
                     style={{ colorScheme: 'dark', backgroundColor: '#1c1a17' }}
                   >
                     <option value="" disabled style={{ backgroundColor: '#1c1a17', color: 'rgba(255,255,255,0.4)' }}>Select a reason…</option>
@@ -146,18 +180,24 @@ export default function ContactModal({ isOpen, onClose }) {
                     <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
+                {touched.inquiry && errors.inquiry && (
+                  <p className="text-[11px] text-red-400/80 mt-1">{errors.inquiry}</p>
+                )}
               </div>
             </div>
 
             {/* submit */}
             <button
               type="submit"
-              className="mt-8 w-full bg-gold text-dark text-[11px] tracking-[.22em] uppercase font-bold py-[17px] border border-gold transition-all duration-300 hover:bg-transparent hover:text-gold flex items-center justify-center gap-3 group"
+              disabled={loading}
+              className="mt-8 w-full bg-gold text-dark text-[11px] tracking-[.22em] uppercase font-bold py-[17px] border border-gold transition-all duration-300 hover:bg-transparent hover:text-gold flex items-center justify-center gap-3 group disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Send Message
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="transition-transform duration-300 group-hover:translate-x-1">
-                <path d="M2 8h12M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              {loading ? 'Sending…' : 'Send Message'}
+              {!loading && (
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="transition-transform duration-300 group-hover:translate-x-1">
+                  <path d="M2 8h12M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              )}
             </button>
           </form>
         ) : (
@@ -188,7 +228,7 @@ export default function ContactModal({ isOpen, onClose }) {
 }
 
 /* ── reusable input field ── */
-function Field({ label, name, type, value, onChange, placeholder }) {
+function Field({ label, name, type, value, onChange, onBlur, placeholder, error }) {
   return (
     <div className="space-y-2">
       <label className="block text-[10px] tracking-[.22em] uppercase text-white/40 font-medium">
@@ -199,10 +239,11 @@ function Field({ label, name, type, value, onChange, placeholder }) {
         name={name}
         value={value}
         onChange={onChange}
-        required
+        onBlur={onBlur}
         placeholder={placeholder}
-        className="w-full bg-white/[.04] border border-white/[.1] text-white text-[14px] font-light px-4 py-3.5 focus:outline-none focus:border-gold/50 transition-colors duration-200 placeholder:text-white/20"
+        className={`w-full bg-white/[.04] border text-white text-[14px] font-light px-4 py-3.5 focus:outline-none transition-colors duration-200 placeholder:text-white/20 ${error ? 'border-red-500/70' : 'border-white/[.1] focus:border-gold/50'}`}
       />
+      {error && <p className="text-[11px] text-red-400/80">{error}</p>}
     </div>
   );
 }
