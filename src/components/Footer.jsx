@@ -39,8 +39,8 @@ export default function Footer() {
             <div className="mb-12">
               <h4 className="text-[11px] tracking-[.25em] uppercase text-white font-bold mb-8">Quick Links</h4>
               <ul className="flex flex-col gap-4 list-none p-0">
-                <li><Link href="/commercial-services" className="text-[10px] tracking-[.15em] uppercase text-white/60 hover:text-gold transition-colors no-underline">Our Services</Link></li>
-                <li><Link href="/about" className="text-[10px] tracking-[.15em] uppercase text-white/60 hover:text-gold transition-colors no-underline">Contact Support</Link></li>
+                <li><Link href="/#services" className="text-[10px] tracking-[.15em] uppercase text-white/60 hover:text-gold transition-colors no-underline">Our Services</Link></li>
+                <li><button type="button" onClick={() => window.dispatchEvent(new CustomEvent('open-contact-modal'))} className="text-[10px] tracking-[.15em] uppercase text-white/60 hover:text-gold transition-colors cursor-pointer bg-transparent border-none p-0">Contact Support</button></li>
               </ul>
             </div>
 
